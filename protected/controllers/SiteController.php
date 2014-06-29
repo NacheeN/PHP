@@ -106,4 +106,49 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	public function ActionRegistro()
+	{
+		$model = new Usuarios;
+		//$model->perfil='Usuario';
+		
+		$this->performAjaxValidation($model);
+
+		if(isset($_POST['Usuarios']))
+		{
+			$model->attributes=$_POST['Usuarios'];
+			$model->pass=sha1($model->pass);
+			/*
+			$uploadedFile=CUploadedFile::getInstance($model,'foto');
+			$fileName = "{$uploadedFile}"; //file name
+           
+			if(!empty($uploadedFile))  // check if uploaded file is set or not
+            {
+               	$uploadedFile->saveAs(Yii::app()->basePath.'/../images/usuarios/'.$fileName);
+                $model->foto = $fileName;
+            }
+			*/
+
+			//agregar esta linea antes del save() lo mismo en la funcion de modificar actionUpdate()
+			if($model->save())
+				$this->redirect(array('index'));
+		}
+		//$this->render('registro', array(
+			//'model'=>$model
+			//));
+		$this->render('registro', array(
+			'model'=>$model
+			));
+
+	}
+
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='registro-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+	}
 }
