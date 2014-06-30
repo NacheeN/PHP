@@ -36,7 +36,7 @@ $this->menu=array(
 		'tipo',
 		'propietario',
 		'prestamo_bancario',
-		'cantidad_baños',
+		'cantidad_banios',
 		'cantidad_habitaciones',
 		'superficie',
 		'fecha_creacion',

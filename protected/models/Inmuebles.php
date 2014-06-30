@@ -19,7 +19,7 @@
  * @property string $tipo
  * @property string $propietario
  * @property integer $prestamo_bancario
- * @property integer $cantidad_ba単os
+ * @property integer $cantidad_banios
  * @property integer $cantidad_habitaciones
  * @property integer $superficie
  * @property string $fecha_creacion
@@ -49,16 +49,17 @@ class Inmuebles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario, fecha_creacion', 'required'),
-			array('id_usuario, garage, jardin, parrillero, prestamo_bancario, cantidad_ba単os, cantidad_habitaciones, superficie', 'numerical', 'integerOnly'=>true),
+			array('id_usuario, tipo, fecha_creacion', 'required'),
+			array('id_usuario, garage, jardin, parrillero, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie', 'numerical', 'integerOnly'=>true),
 			array('valor', 'numerical'),
 			array('nombre', 'length', 'max'=>15),
-			array('estado, piso, tipo', 'length', 'max'=>20),
+			array('estado, piso', 'length', 'max'=>20),
 			array('direccion, titulo, propietario', 'length', 'max'=>50),
+			array('tipo', 'length', 'max'=>7),
 			array('descripcion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_ba単os, cantidad_habitaciones, superficie, fecha_creacion', 'safe', 'on'=>'search'),
+			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, fecha_creacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -99,7 +100,7 @@ class Inmuebles extends CActiveRecord
 			'tipo' => 'Tipo',
 			'propietario' => 'Propietario',
 			'prestamo_bancario' => 'Prestamo Bancario',
-			'cantidad_ba単os' => 'Cantidad Ba祓os',
+			'cantidad_banios' => 'Cantidad Banios',
 			'cantidad_habitaciones' => 'Cantidad Habitaciones',
 			'superficie' => 'Superficie',
 			'fecha_creacion' => 'Fecha Creacion',
@@ -139,7 +140,7 @@ class Inmuebles extends CActiveRecord
 		$criteria->compare('tipo',$this->tipo,true);
 		$criteria->compare('propietario',$this->propietario,true);
 		$criteria->compare('prestamo_bancario',$this->prestamo_bancario);
-		$criteria->compare('cantidad_ba単os',$this->cantidad_ba単os);
+		$criteria->compare('cantidad_banios',$this->cantidad_banios);
 		$criteria->compare('cantidad_habitaciones',$this->cantidad_habitaciones);
 		$criteria->compare('superficie',$this->superficie);
 		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);

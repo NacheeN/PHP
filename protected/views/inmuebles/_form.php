@@ -87,7 +87,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipo'); ?>
-		<?php echo $form->textField($model,'tipo',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo ZHtml::enumDropDownList($model,'tipo'); ?>
+		<!-- <?php /*echo $form->textField($model,'tipo',array('size'=>20,'maxlength'=>20)); */ ?> -->
 		<?php echo $form->error($model,'tipo'); ?>
 	</div>
 
@@ -104,9 +105,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cantidad_baños'); ?>
-		<?php echo $form->textField($model,'cantidad_baños'); ?>
-		<?php echo $form->error($model,'cantidad_baños'); ?>
+		<?php echo $form->labelEx($model,'cantidad_banios'); ?>
+		<?php echo $form->textField($model,'cantidad_banios'); ?>
+		<?php echo $form->error($model,'cantidad_banios'); ?>
 	</div>
 
 	<div class="row">
