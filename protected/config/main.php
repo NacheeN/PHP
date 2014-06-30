@@ -8,6 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Inmobiliaria',
+	'charset'=>'utf-8',
+	'language'=>'es',
+	'sourceLanguage'=>'en',
 
 	// preloading 'log' component
 	// se agrega bootstrap
