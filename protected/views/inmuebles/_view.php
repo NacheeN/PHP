@@ -9,6 +9,10 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_barrio')); ?>:</b>
+	<?php echo CHtml::encode($data->id_barrio); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_usuario')); ?>:</b>
 	<?php echo CHtml::encode($data->id_usuario); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->direccion); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('titulo')); ?>:</b>
 	<?php echo CHtml::encode($data->titulo); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
 	<?php echo CHtml::encode($data->descripcion); ?>
 	<br />
@@ -66,8 +70,8 @@
 	<?php echo CHtml::encode($data->prestamo_bancario); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_baños')); ?>:</b>
-	<?php echo CHtml::encode($data->cantidad_baños); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_banios')); ?>:</b>
+	<?php echo CHtml::encode($data->cantidad_banios); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad_habitaciones')); ?>:</b>

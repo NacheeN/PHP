@@ -20,6 +20,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'id_barrio'); ?>
+		<?php echo $form->textField($model,'id_barrio'); ?>
+		<?php echo $form->error($model,'id_barrio'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'id_usuario'); ?>
 		<?php echo $form->textField($model,'id_usuario'); ?>
 		<?php echo $form->error($model,'id_usuario'); ?>
@@ -104,9 +110,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cantidad_baños'); ?>
-		<?php echo $form->textField($model,'cantidad_baños'); ?>
-		<?php echo $form->error($model,'cantidad_baños'); ?>
+		<?php echo $form->labelEx($model,'cantidad_banios'); ?>
+		<?php echo $form->textField($model,'cantidad_banios'); ?>
+		<?php echo $form->error($model,'cantidad_banios'); ?>
 	</div>
 
 	<div class="row">

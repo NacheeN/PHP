@@ -25,7 +25,7 @@
             			'type' => 'navbar',
 						'items'=>array(
 							array('label'=>'Inicio', 'url'=>array('/site/index')),
-							array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+							array('label'=>'Acerca de', 'url'=>array('/site/page', 'view'=>'about')),
 							array('label'=>'Contacto', 'url'=>array('/site/contact')),
 							array('label'=>'Usuario', 'url'=>array('/usuarios/create')),
 							array('label'=>'Inmueble', 'url'=>array('/inmuebles/create')),

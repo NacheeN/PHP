@@ -17,6 +17,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'id_barrio'); ?>
+		<?php echo $form->textField($model,'id_barrio'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'id_usuario'); ?>
 		<?php echo $form->textField($model,'id_usuario'); ?>
 	</div>
@@ -87,8 +92,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'cantidad_baños'); ?>
-		<?php echo $form->textField($model,'cantidad_baños'); ?>
+		<?php echo $form->label($model,'cantidad_banios'); ?>
+		<?php echo $form->textField($model,'cantidad_banios'); ?>
 	</div>
 
 	<div class="row">

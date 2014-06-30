@@ -29,7 +29,19 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$dataProvider=new CActiveDataProvider('Inmuebles', array(
+		    'criteria'=>array(
+		        //'condition'=>'status=1',
+		        'order'=>'id DESC',
+		        //'with'=>array('author'),
+		    ),
+		    'pagination'=>array(
+		        'pageSize'=>5,
+		    ),
+		));
+
+		$this->render('index',array('dataProvider'=>$dataProvider));
+
 	}
 
 	/**

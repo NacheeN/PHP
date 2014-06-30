@@ -22,6 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+		'id_barrio',
 		'id_usuario',
 		'nombre',
 		'valor',
@@ -36,7 +37,7 @@ $this->menu=array(
 		'tipo',
 		'propietario',
 		'prestamo_bancario',
-		'cantidad_baños',
+		'cantidad_banios',
 		'cantidad_habitaciones',
 		'superficie',
 		'fecha_creacion',
