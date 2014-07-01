@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Usuarioses'=>array('index'),
-	$model->id,
+	$model->nick,
 );
 
 $this->menu=array(
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Usuarios #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->nick; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

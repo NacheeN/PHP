@@ -3,8 +3,8 @@
 /* @var $model Usuarios */
 
 $this->breadcrumbs=array(
-	'Usuarioses'=>array('index'),
-	'Create',
+	'Usuarios'=>array('index'),
+	'Crear',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Usuarios</h1>
+<h1>Crear Usuarios</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
