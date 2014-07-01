@@ -928,3 +928,80 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/PHP/inmuebles/index.php
 ---
+2014/07/01 03:22:19 [error] [exception.CException] exception 'CException' with message 'El atributo debe especificarse en el formato "Nombre:Tipo:Etiqueta", donde "Tipo" y "Etiqueta" son opcionales.' in E:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php:183
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#1 E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php(45): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#7 [internal function]: InmueblesController->actionView('1')
+#8 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#9 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#20 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/PHP/inmuebles/1.html
+---
+2014/07/01 03:22:46 [error] [exception.CException] exception 'CException' with message 'Tipo desconocido "usuario".' in E:\xampp\htdocs\yii\framework\utils\CFormatter.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php(218): CFormatter->format('', 'usuario')
+#1 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#2 E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php(45): CBaseController->widget('zii.widgets.CDe...', Array)
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#4 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#7 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#8 [internal function]: InmueblesController->actionView('1')
+#9 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#10 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#20 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#21 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/PHP/inmuebles/1.html
+---
+2014/07/01 03:27:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "FinanceService Web Service_files" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('FinanceService ...')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('FinanceService ...')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/Finan...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/FinanceService%20Web%20Service_files/FinanceService.asmx
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/1.html
+---
+2014/07/01 03:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "FinanceService Web Service_files" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('FinanceService ...')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('FinanceService ...')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/Finan...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/FinanceService%20Web%20Service_files/FinanceService.asmx
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/1.html
+---
