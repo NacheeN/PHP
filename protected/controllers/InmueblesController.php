@@ -32,7 +32,7 @@ class InmueblesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','imagenes'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -66,12 +66,13 @@ class InmueblesController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		$model->id_usuario=Yii::app()->user->id;
 
 		if(isset($_POST['Inmuebles']))
 		{
 			$model->attributes=$_POST['Inmuebles'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('imagenes','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -90,7 +91,7 @@ class InmueblesController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$model->id_usuario=Yii::app()->user->id;
 		if(isset($_POST['Inmuebles']))
 		{
 			$model->attributes=$_POST['Inmuebles'];
@@ -117,6 +118,47 @@ class InmueblesController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
+	public function actionImagenes()
+	{
+		$model=new Imagenes;
+		
+		if(isset($_POST['Imagenes']))
+		{
+
+			$imagenes->id_inmueble=$id;
+			$model->attributes=$_POST['Imagenes'];
+			$images=CUploadedFile::getInstancesByName('ruta');
+
+			if(count($images)===0)
+			{
+				$msg="Nos has seleccionado ninguna imagen";
+			}
+			else if(!$imagenes->validate())
+			{
+				$msg="error al enviar el formulario";
+			}
+			else
+			{
+				foreach ($images as $image => $value) 
+				{
+					$aleatorio = rand(100000, 999999);
+					$nombre = $aleatorio.'-'.$value->nombre;
+					$value->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$nombre);
+				}
+				
+				
+			}
+
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
+
+		
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+	
 	/**
 	 * Lists all models.
 	 */

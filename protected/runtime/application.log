@@ -882,39 +882,128 @@ REQUEST_URI=/PHP/imagenes/create
 HTTP_REFERER=http://localhost:8080/PHP/inmuebles/create.html
 >>>>>>> 617791bfb9b929f44b2b3fdfb4ee0ed042179d9e
 ---
-2014/07/01 01:01:28 [error] [exception.CException] exception 'CException' with message 'La propiedad "Inmuebles"."cantidad_banios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+2014/07/01 02:39:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexiÛn ya que el equipo de destino denegÛ expresamente dicha conexiÛn.
+' in E:\xampp\htdocs\yii\framework\db\CDbConnection.php:382
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cantidad_banios')
-#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('cantidad_banios')
-#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Inmuebles), 'cantidad_banios')
-#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Inmuebles), 'cantidad_banios', Array)
-#4 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Inmuebles), 'cantidad_banios', Array)
-#5 C:\wamp\www\PHP\protected\views\inmuebles\_form.php(109): CActiveForm->textField(Object(Inmuebles), 'cantidad_banios')
-#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
-#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
-#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
-#9 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): CController->renderPartial('_form', Array)
-#10 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
-#11 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
-#12 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
-#13 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
-#14 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(80): CController->render('create', Array)
-#15 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
-#16 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#18 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#19 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#20 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#21 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#22 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
-#23 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#24 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
-#25 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
-#26 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#27 C:\wamp\www\PHP\index.php(13): CApplication->run()
-#28 {main}
-REQUEST_URI=/PHP/inmuebles/create.html
-HTTP_REFERER=http://localhost:8080/PHP/usuarios/create.html
+#0 E:\xampp\htdocs\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 E:\xampp\htdocs\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 E:\xampp\htdocs\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 E:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 E:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 E:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1595): CActiveRecord->getCommandBuilder()
+#7 E:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#8 E:\xampp\htdocs\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#9 E:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#10 E:\xampp\htdocs\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#11 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#12 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#13 E:\xampp\htdocs\PHP\protected\extensions\booster\widgets\TbListView.php(43): CListView->init()
+#14 E:\xampp\htdocs\yii\framework\web\CBaseController.php(147): TbListView->init()
+#15 E:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#16 E:\xampp\htdocs\PHP\protected\views\site\index.php(26): CBaseController->widget('booster.widgets...', Array)
+#17 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#18 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#21 E:\xampp\htdocs\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#22 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#23 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 E:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#25 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#27 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/PHP/index.php
+---
+2014/07/01 02:58:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acci√≥n "index.php" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/index...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/index.php
+---
+2014/07/01 03:22:19 [error] [exception.CException] exception 'CException' with message 'El atributo debe especificarse en el formato "Nombre:Tipo:Etiqueta", donde "Tipo" y "Etiqueta" son opcionales.' in E:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php:183
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#1 E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php(45): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#7 [internal function]: InmueblesController->actionView('1')
+#8 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#9 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#20 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/PHP/inmuebles/1.html
+---
+2014/07/01 03:22:46 [error] [exception.CException] exception 'CException' with message 'Tipo desconocido "usuario".' in E:\xampp\htdocs\yii\framework\utils\CFormatter.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php(218): CFormatter->format('', 'usuario')
+#1 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#2 E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php(45): CBaseController->widget('zii.widgets.CDe...', Array)
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#4 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#7 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#8 [internal function]: InmueblesController->actionView('1')
+#9 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#10 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#20 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#21 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/PHP/inmuebles/1.html
+---
+2014/07/01 03:27:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acci√≥n "FinanceService Web Service_files" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('FinanceService ...')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('FinanceService ...')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/Finan...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/FinanceService%20Web%20Service_files/FinanceService.asmx
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/1.html
+---
+2014/07/01 03:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acci√≥n "FinanceService Web Service_files" solicitada.' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('FinanceService ...')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('FinanceService ...')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/Finan...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/FinanceService%20Web%20Service_files/FinanceService.asmx
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/1.html
 ---
 2014/07/01 02:50:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inv√°lida.' in C:\wamp\www\yii\framework\web\CController.php:336
 Stack trace:
