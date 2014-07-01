@@ -45,7 +45,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo ZHtml::enumDropDownList($model,'estado'); ?>
+		<!--<?php /*echo $form->textField($model,'estado',array('size'=>20,'maxlength'=>20));*/ ?>-->
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 
