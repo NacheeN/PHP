@@ -549,3 +549,37 @@ Stack trace:
 REQUEST_URI=/PHP/inmuebles/1.html
 HTTP_REFERER=http://localhost:8080/PHP/inmuebles/create.html
 ---
+2014/07/01 01:01:28 [error] [exception.CException] exception 'CException' with message 'La propiedad "Inmuebles"."cantidad_banios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cantidad_banios')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('cantidad_banios')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Inmuebles), 'cantidad_banios')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Inmuebles), 'cantidad_banios', Array)
+#4 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Inmuebles), 'cantidad_banios', Array)
+#5 C:\wamp\www\PHP\protected\views\inmuebles\_form.php(109): CActiveForm->textField(Object(Inmuebles), 'cantidad_banios')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#9 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(80): CController->render('create', Array)
+#15 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#16 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#26 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:8080/PHP/usuarios/create.html
+---
