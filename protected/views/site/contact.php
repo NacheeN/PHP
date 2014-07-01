@@ -11,6 +11,20 @@ $this->breadcrumbs=array(
 
 <h1>Contactenos</h1>
 
+<div class="row">
+
+	<div class="col-lg-12">
+		<?php echo CHtml::link('Crear Solicitud', array('inmuebles/create'), array('class'=>'btn btn-default')); ?>
+	</div>
+	
+	<!--
+	<?/*php $select = null;
+	echo CHtml::dropDownList('listname', $select, 
+             array('tipo'=>'Informacion de la Empresa','Alta de Inmueble'),
+             array('empty' => 'Seleccione el tipo de consulta'));
+	*/?>
+-->
+</div>
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
 <div class="flash-success">
