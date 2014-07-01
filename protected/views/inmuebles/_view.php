@@ -9,10 +9,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_barrio')); ?>:</b>
-	<?php echo CHtml::encode($data->id_barrio); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_usuario')); ?>:</b>
 	<?php echo CHtml::encode($data->id_usuario); ?>
 	<br />
@@ -33,11 +29,11 @@
 	<?php echo CHtml::encode($data->direccion); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('titulo')); ?>:</b>
 	<?php echo CHtml::encode($data->titulo); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
 	<?php echo CHtml::encode($data->descripcion); ?>
 	<br />
@@ -82,8 +78,20 @@
 	<?php echo CHtml::encode($data->superficie); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('imagen_portada')); ?>:</b>
+	<?php echo CHtml::encode($data->imagen_portada); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_creacion')); ?>:</b>
 	<?php echo CHtml::encode($data->fecha_creacion); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_barrio')); ?>:</b>
+	<?php echo CHtml::encode($data->id_barrio); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('amueblado')); ?>:</b>
+	<?php echo CHtml::encode($data->amueblado); ?>
 	<br />
 
 	*/ ?>

@@ -4,9 +4,6 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<div class="alert alert-warning">
-	BOOTSTRAP ESTA ANDANDO
-</div>
 <!--
 <?php #$this->widget('zii.widgets.CListView', array(
 	#'dataProvider'=>$dataProvider,

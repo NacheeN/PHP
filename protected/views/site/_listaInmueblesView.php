@@ -32,13 +32,13 @@
 
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-        <!--<img src="<?php #echo bu('images/placeholder260x180.gif');?>" alt="">-->
+        <img src="<?php echo Yii::app()->request->baseUrl;?>/images/inmueble/<?php echo $data->imagen_portada?>" alt="">
         <div class="caption">
             <h3><?php echo CHtml::encode($data->nombre); ?></h3>
             <p><?php echo CHtml::encode($data->tipo); ?></p> 
             <p>U$S <?php echo CHtml::encode($data->valor); ?></p>
             <p><?php echo CHtml::encode($data->superficie); ?> m<sup>2</sup></p>           
-            <p><a href="#" class="btn btn-primary" role="button">Vista</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            <p><?php echo CHtml::link('Vista', array('inmuebles/view', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?> <a href="#" class="btn btn-default" role="button">Comprar</a></p>
         </div>
     </div>
 </div>

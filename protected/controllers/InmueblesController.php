@@ -67,12 +67,28 @@ class InmueblesController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		$model->id_usuario=Yii::app()->user->id;
-
+		$model->id_barrio=1;
+		$model->idBarrio->id_departamento=1;
+		$model->idBarrio->id_ciudad=1;
 		if(isset($_POST['Inmuebles']))
 		{
 			$model->attributes=$_POST['Inmuebles'];
+
+			$uploadedFile=CUploadedFile::getInstance($model,'imagen_portada');
+			$aleatorio = rand(100000, 999999);
+			$fileName = "{$uploadedFile}".$aleatorio; //file name
+           
+			if(!empty($uploadedFile))  // check if uploaded file is set or not
+            {
+              	
+               	$uploadedFile->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$fileName);
+                $model->imagen_portada = $fileName;
+            }
+
 			if($model->save())
+			{
 				$this->redirect(array('imagenes','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -118,7 +134,7 @@ class InmueblesController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	public function actionImagenes()
+	public function actionImagenes($id)
 	{
 		$model=new Imagenes;
 		
@@ -154,7 +170,7 @@ class InmueblesController extends Controller
 		}
 
 		
-		$this->render('create',array(
+		$this->render('imagenes',array(
 			'model'=>$model,
 		));
 	}

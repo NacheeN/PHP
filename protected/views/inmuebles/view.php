@@ -1,10 +1,10 @@
-<?php
+﻿<?php
 /* @var $this InmueblesController */
 /* @var $model Inmuebles */
 
 $this->breadcrumbs=array(
 	'Inmuebles'=>array('index'),
-	$model->id,
+	$model->nombre,
 );
 
 $this->menu=array(
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Inmuebles #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->nombre; ?></h1>
 <table>
 	<tr>
 		<td>
@@ -81,3 +81,4 @@ $this->menu=array(
 		</td>
 	</tr>
 </table>
+
