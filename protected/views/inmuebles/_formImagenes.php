@@ -17,18 +17,18 @@
 		'enableAjaxValidation'=>false,
 	)
 ); ?>
-
+<!--
 		<div class="form-group">
 			<div class="col-lg-2">
-				<?php echo $form->labelEx($model,'nombre'); ?>
+				<?php #echo $form->labelEx($model,'nombre'); ?>
 				
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'nombre',array('size'=>20,'maxlength'=>20)); ?>
-				<?php echo $form->error($model,'nombre'); ?>
+				<?php #echo $form->textField($model,'nombre',array('size'=>20,'maxlength'=>20)); ?>
+				<?php #echo $form->error($model,'nombre'); ?>
 			</div>
 		</div>
-
+-->
 		<div class="form-group">
 			<?php 
 				$this->widget('CMultiFileUpload',
@@ -46,23 +46,6 @@
 
 		</div>
 
-		<div class="form-group">
-			<?php echo $form->switchGroup($model, 'destacada',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
-						)
-					)
-				)
-			); ?>
-			<?php echo $form->error($model,'destacada'); ?>
-
-		</div>
 		<div class="form-group">
 			<div class="col-lg-12">
 				<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>

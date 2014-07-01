@@ -17,11 +17,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_barrio'); ?>
-		<?php echo $form->textField($model,'id_barrio'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'id_usuario'); ?>
 		<?php echo $form->textField($model,'id_usuario'); ?>
 	</div>
@@ -73,12 +68,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'piso'); ?>
-		<?php echo $form->textField($model,'piso',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'piso'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'tipo'); ?>
-		<?php echo $form->textField($model,'tipo',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'tipo',array('size'=>7,'maxlength'=>7)); ?>
 	</div>
 
 	<div class="row">
@@ -107,8 +102,23 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'imagen_portada'); ?>
+		<?php echo $form->textField($model,'imagen_portada',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'fecha_creacion'); ?>
 		<?php echo $form->textField($model,'fecha_creacion'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'id_barrio'); ?>
+		<?php echo $form->textField($model,'id_barrio'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'amueblado'); ?>
+		<?php echo $form->textField($model,'amueblado'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -46,13 +46,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'id_barrio',
 		'id_usuario',
 		'nombre',
 		'valor',
 		'estado',
-		/*
 		'direccion',
+		/*
 		'titulo',
 		'descripcion',
 		'garage',
@@ -65,7 +64,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'cantidad_banios',
 		'cantidad_habitaciones',
 		'superficie',
+		'imagen_portada',
 		'fecha_creacion',
+		'id_barrio',
+		'amueblado',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -11,21 +11,13 @@
 	array(
 		'id' => 'inmuebles-form',
 		'type' => 'horizontal',
+		'htmlOptions'=>array(
+			'enctype'=>'multipart/form-data',
+			),
 		'enableAjaxValidation'=>false,
 	)
 ); ?>
-<!--
-<?php #$form=$this->beginWidget('CActiveForm', array(
-	#'id'=>'inmuebles-form',
-	#'enctype'=>'multipart/form-data',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 
-	#'enableAjaxValidation'=>false,
-#)); ?>
--->	
 	<div class="form-group">
 		<div class="col-lg-2">
 			<div class="text-danger">
@@ -33,17 +25,7 @@
 			</div>
 		</div>
 	</div>
-<!--
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php #echo $form->labelEx($model,'id_barrio'); ?>
-		</div>
-		<div class="col-lg-10">
-			<?php #echo $form->textField($model,'id_barrio'); ?>
-			<?php #echo $form->error($model,'id_barrio'); ?>
-		</div>
-	</div>
--->
+
 	<div class="form-group">
 		<div class="col-lg-2">
 			<?php echo $form->labelEx($model,'nombre'); ?>
@@ -57,7 +39,7 @@
 	<div class="form-group">
 		<div class="col-lg-2">
 			<?php echo $form->labelEx($model,'valor'); ?>
-		
+			
 		</div>
 		<div class="col-lg-10">
 			<?php echo $form->textField($model,'valor'); ?>
@@ -110,35 +92,74 @@
 	</div>
 
 	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'garage'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'garage'); ?>
-			<?php echo $form->error($model,'garage'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'jardin'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'jardin'); ?>
-			<?php echo $form->error($model,'jardin'); ?>
+		<div class="col-lg-12">
+		<?php echo $form->switchGroup($model, 'amueblado',
+				array(
+					'widgetOptions' => array(
+						'events'=>array(
+							'switchChange'=>'js:function(event, state) {
+							  console.log(this); // DOM element
+							  console.log(event); // jQuery event
+							  console.log(state); // true | false
+							}'
+						)
+					)
+				)
+			); ?>
 		</div>
 	</div>
 
 	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'parrillero'); ?>
-		
+		<div class="col-lg-12">
+		<?php echo $form->switchGroup($model, 'garage',
+				array(
+					'widgetOptions' => array(
+						'events'=>array(
+							'switchChange'=>'js:function(event, state) {
+							  console.log(this); // DOM element
+							  console.log(event); // jQuery event
+							  console.log(state); // true | false
+							}'
+						)
+					)
+				)
+			); ?>
 		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'parrillero'); ?>
-			<?php echo $form->error($model,'parrillero'); ?>
+	</div>
+
+	<div class="form-group">
+		<div class="col-lg-12">
+		<?php echo $form->switchGroup($model, 'jardin',
+				array(
+					'widgetOptions' => array(
+						'events'=>array(
+							'switchChange'=>'js:function(event, state) {
+							  console.log(this); // DOM element
+							  console.log(event); // jQuery event
+							  console.log(state); // true | false
+							}'
+						)
+					)
+				)
+			); ?>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-lg-12">
+		<?php echo $form->switchGroup($model, 'parrillero',
+				array(
+					'widgetOptions' => array(
+						'events'=>array(
+							'switchChange'=>'js:function(event, state) {
+							  console.log(this); // DOM element
+							  console.log(event); // jQuery event
+							  console.log(state); // true | false
+							}'
+						)
+					)
+				)
+			); ?>
 		</div>
 	</div>
 
@@ -176,13 +197,20 @@
 	</div>
 
 	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'prestamo_bancario'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'prestamo_bancario'); ?>
-			<?php echo $form->error($model,'prestamo_bancario'); ?>
+		<div class="col-lg-12">
+		<?php echo $form->switchGroup($model, 'prestamo_bancario',
+				array(
+					'widgetOptions' => array(
+						'events'=>array(
+							'switchChange'=>'js:function(event, state) {
+							  console.log(this); // DOM element
+							  console.log(event); // jQuery event
+							  console.log(state); // true | false
+							}'
+						)
+					)
+				)
+			); ?>
 		</div>
 	</div>
 
@@ -220,6 +248,19 @@
 	</div>
 
 	<div class="form-group">
+		<div class="col-lg-2">
+			<?php echo $form->labelEx($model,'imagen_portada'); ?>
+		
+		</div>
+		<div class="col-lg-10">	
+			<?php echo CHtml::activeFileField($model,'imagen_portada'); ?>
+			<?php echo $form->error($model,'imagen_portada'); ?>
+		</div>
+	</div>
+
+	
+
+	<div class="form-group">
 		<div class="col-lg-12">
 			<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar', array('class'=>'btn btn-default')); ?>
 		</div>
@@ -228,4 +269,3 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-

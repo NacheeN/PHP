@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Inmuebles'=>array('index'),
-	$model->id,
+	$model->nombre,
 );
 
 $this->menu=array(
@@ -16,13 +16,12 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Inmuebles #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->nombre; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'id_barrio',
 		'id_usuario',
 		'nombre',
 		'valor',
@@ -40,6 +39,9 @@ $this->menu=array(
 		'cantidad_banios',
 		'cantidad_habitaciones',
 		'superficie',
+		'imagen_portada',
 		'fecha_creacion',
+		'id_barrio',
+		'amueblado',
 	),
 )); ?>

@@ -928,3 +928,250 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/PHP/inmuebles/index.php
 ---
+2014/07/01 03:16:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "Imagenes"."valor" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('valor')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('valor')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Imagenes), 'valor')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Imagenes), 'valor', Array)
+#4 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Imagenes), 'valor', Array)
+#5 C:\wamp\www\PHP\protected\views\inmuebles\_form.php(63): CActiveForm->textField(Object(Imagenes), 'valor')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#9 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(159): CController->render('create', Array)
+#15 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionImagenes()
+#16 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#26 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes
+---
+2014/07/01 03:26:11 [error] [php] Undefined variable: id (C:\wamp\www\PHP\protected\controllers\InmueblesController.php:128)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/imagenes
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (128)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 04:15:36 [error] [php] move_uploaded_file(C:\wamp\www\PHP\protected/../images/inmueble/1.jpg): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/create.html
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (81)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 04:16:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "Inmuebles"."imagen" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', '1.jpg')
+#1 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(82): CActiveRecord->__set('imagen', '1.jpg')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 04:18:08 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (85)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 04:18:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(85): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 12:53:01 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (85)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 12:53:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(85): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 12:56:49 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (87)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 12:56:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(87): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 12:59:37 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (87)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 12:59:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `id_barrio`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(87): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 18:22:31 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (87)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 18:22:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(87): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 18:23:19 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `inmuebles` (`id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18).
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (87)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/01 18:23:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db_inmobiliaria`.`inmuebles`, CONSTRAINT `FK_USUARIO` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `inmuebles` (`id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(87): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/07/01 18:36:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/post/1.jpg"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/post/1.j...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/images/post/1.jpg
+HTTP_REFERER=http://localhost:90/PHP/
+---

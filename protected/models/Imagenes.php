@@ -6,9 +6,7 @@
  * The followings are the available columns in table 'imagenes':
  * @property integer $id
  * @property integer $id_inmueble
- * @property string $nombre
  * @property string $ruta
- * @property integer $destacada
  *
  * The followings are the available model relations:
  * @property Inmuebles $idInmueble
@@ -32,12 +30,11 @@ class Imagenes extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_inmueble', 'required'),
-			array('id_inmueble, destacada', 'numerical', 'integerOnly'=>true),
-			array('nombre', 'length', 'max'=>20),
+			array('id_inmueble', 'numerical', 'integerOnly'=>true),
 			array('ruta', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_inmueble, nombre, ruta, destacada', 'safe', 'on'=>'search'),
+			array('id, id_inmueble, ruta', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,9 +58,7 @@ class Imagenes extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'id_inmueble' => 'Id Inmueble',
-			'nombre' => 'Nombre',
 			'ruta' => 'Ruta',
-			'destacada' => 'Destacada',
 		);
 	}
 
@@ -87,9 +82,7 @@ class Imagenes extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('id_inmueble',$this->id_inmueble);
-		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('ruta',$this->ruta,true);
-		$criteria->compare('destacada',$this->destacada);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
