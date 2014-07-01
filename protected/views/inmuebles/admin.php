@@ -46,12 +46,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
+		'id_barrio',
 		'id_usuario',
 		'nombre',
 		'valor',
 		'estado',
-		'direccion',
 		/*
+		'direccion',
 		'titulo',
 		'descripcion',
 		'garage',
@@ -61,7 +62,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'tipo',
 		'propietario',
 		'prestamo_bancario',
-		'cantidad_baños',
+		'cantidad_banios',
 		'cantidad_habitaciones',
 		'superficie',
 		'fecha_creacion',

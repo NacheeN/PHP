@@ -165,6 +165,89 @@ Stack trace:
 REQUEST_URI=/proyecto_php/site/registro.html
 HTTP_REFERER=http://localhost:90/proyecto_php/site/login.html
 ---
+<<<<<<< HEAD
+2014/06/29 23:16:28 [error] [php] Trying to get property of non-object (C:\wamp\www\PHP\protected\views\inmuebles\_form.php:21)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#1 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): InmueblesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): InmueblesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): InmueblesController->renderPartial()
+#6 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(80): InmueblesController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/create.html
+in C:\wamp\www\PHP\protected\views\inmuebles\_form.php (21)
+in C:\wamp\www\PHP\protected\views\inmuebles\create.php (18)
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (80)
+2014/06/29 23:26:43 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\yii\framework\zii\widgets\CDetailView.php:183
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\wamp\www\PHP\protected\views\inmuebles\view.php(44): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(57): CController->render('view', Array)
+#7 [internal function]: InmueblesController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/PHP/inmuebles/1.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/06/29 23:48:59 [error] [php] require(): Filename cannot be empty (C:\wamp\www\yii\framework\web\CBaseController.php:130)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\PHP\protected\views\site\index.php(15): SiteController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): SiteController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/site/index.html
+in C:\wamp\www\PHP\protected\views\site\index.php (15)
+in C:\wamp\www\PHP\protected\controllers\SiteController.php (43)
+in C:\wamp\www\PHP\index.php (13)
+2014/06/29 23:51:24 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\yii\framework\zii\widgets\CDetailView.php:183
+=======
 2014/06/29 22:26:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
 Stack trace:
 #0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
@@ -522,6 +605,7 @@ REQUEST_URI=/PHP/inmuebles/create.html
 HTTP_REFERER=http://localhost:8080/PHP/inmuebles/
 ---
 2014/07/01 00:12:00 [error] [exception.CException] exception 'CException' with message 'El atributo debe especificarse en el formato "Nombre:Tipo:Etiqueta", donde "Tipo" y "Etiqueta" son opcionales.' in C:\wamp\www\yii\framework\zii\widgets\CDetailView.php:183
+>>>>>>> 617791bfb9b929f44b2b3fdfb4ee0ed042179d9e
 Stack trace:
 #0 C:\wamp\www\yii\framework\web\CBaseController.php(173): CDetailView->run()
 #1 C:\wamp\www\PHP\protected\views\inmuebles\view.php(44): CBaseController->widget('zii.widgets.CDe...', Array)
@@ -547,7 +631,256 @@ Stack trace:
 #21 C:\wamp\www\PHP\index.php(13): CApplication->run()
 #22 {main}
 REQUEST_URI=/PHP/inmuebles/1.html
+<<<<<<< HEAD
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/admin
+---
+2014/06/30 00:05:00 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\yii\framework\zii\widgets\CDetailView.php:183
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\wamp\www\PHP\protected\views\inmuebles\view.php(44): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#7 [internal function]: InmueblesController->actionView('2')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/PHP/inmuebles/2.html
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/06/30 01:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<br ".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('<br ')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('<br ')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/<br /><fon...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error%20xe-fatal-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://localhost:90/PHP/site/index.html
+---
+2014/06/30 01:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<br ".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('<br ')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('<br ')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/<br /><fon...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error%20xe-fatal-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://localhost:90/PHP/site/index.html
+---
+2014/06/30 03:18:54 [error] [php] include(Ciudad.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(67): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#4 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/create.html
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (67)
+in C:\wamp\www\PHP\index.php (13)
+2014/06/30 03:19:40 [error] [exception.CException] exception 'CException' with message 'Property "TbActiveForm.enctype" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('enctype', 'multipart/form-...')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(InmueblesController), 'booster.widgets...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(189): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\wamp\www\PHP\protected\views\inmuebles\_form.php(17): CBaseController->beginWidget('booster.widgets...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#7 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(84): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/06/30 03:19:42 [error] [exception.CException] exception 'CException' with message 'Property "TbActiveForm.enctype" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('enctype', 'multipart/form-...')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(InmueblesController), 'booster.widgets...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(189): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\wamp\www\PHP\protected\views\inmuebles\_form.php(17): CBaseController->beginWidget('booster.widgets...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#7 C:\wamp\www\PHP\protected\views\inmuebles\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(84): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/creat...')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/PHP/inmuebles/create.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/06/30 03:22:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes/4.html?0=create
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/06/30 03:24:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes
+---
+2014/06/30 03:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes
+---
+2014/06/30 03:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes/create
+---
+2014/06/30 03:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes/create
+---
+2014/06/30 03:30:12 [error] [php] Undefined variable: id (C:\wamp\www\PHP\protected\controllers\ImagenesController.php:72)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes/create
+in C:\wamp\www\PHP\protected\controllers\ImagenesController.php (72)
+in C:\wamp\www\PHP\index.php (13)
+2014/06/30 03:34:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/create')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/create
+---
+2014/06/30 03:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/image...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/inmuebles/imagenes/5.html?0=create&1=
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create.html
+---
+2014/06/30 23:56:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/create')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/create
+=======
 HTTP_REFERER=http://localhost:8080/PHP/inmuebles/create.html
+>>>>>>> 617791bfb9b929f44b2b3fdfb4ee0ed042179d9e
 ---
 2014/07/01 01:01:28 [error] [exception.CException] exception 'CException' with message 'La propiedad "Inmuebles"."cantidad_banios" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
 Stack trace:

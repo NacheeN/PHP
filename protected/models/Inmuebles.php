@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'inmuebles':
  * @property integer $id
+ * @property integer $id_barrio
  * @property integer $id_usuario
  * @property string $nombre
  * @property double $valor
@@ -49,17 +50,26 @@ class Inmuebles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('id_barrio, id_usuario', 'required'),
+			array('id_barrio, id_usuario, garage, jardin, parrillero, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie', 'numerical', 'integerOnly'=>true),
+
 			array('id_usuario, tipo, fecha_creacion', 'required'),
 			array('id_usuario, garage, jardin, parrillero, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie', 'numerical', 'integerOnly'=>true),
 			array('valor', 'numerical'),
 			array('nombre', 'length', 'max'=>15),
 			array('estado, piso', 'length', 'max'=>20),
 			array('direccion, titulo, propietario', 'length', 'max'=>50),
+			array('descripcion, fecha_creacion', 'safe'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, id_barrio, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, fecha_creacion', 'safe', 'on'=>'search'),
+
 			array('tipo', 'length', 'max'=>7),
 			array('descripcion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, fecha_creacion', 'safe', 'on'=>'search'),
+
 		);
 	}
 
@@ -86,6 +96,7 @@ class Inmuebles extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'id_barrio' => 'Id Barrio',
 			'id_usuario' => 'Id Usuario',
 			'nombre' => 'Nombre',
 			'valor' => 'Valor',
@@ -126,6 +137,7 @@ class Inmuebles extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('id_barrio',$this->id_barrio);
 		$criteria->compare('id_usuario',$this->id_usuario);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('valor',$this->valor);
