@@ -48,7 +48,7 @@
 
 		<div class="form-group">
 			<div class="col-lg-12">
-				<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
+				<?php echo CHtml::submitButton($model->isNewRecord ? 'Agregar Imagenes' : 'Save', array('class'=>'btn btn-default')); ?>
 			</div>
 		</div>
 

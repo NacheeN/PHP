@@ -17,7 +17,6 @@
 		'enableAjaxValidation'=>false,
 	)
 ); ?>
-
 	<div class="form-group">
 		<div class="col-lg-2">
 			<div class="text-danger">
@@ -26,238 +25,242 @@
 		</div>
 	</div>
 
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'nombre'); ?>
+	<div class="col-lg-8">
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'nombre'); ?>
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'nombre',array('size'=>15,'maxlength'=>15)); ?>
+				<?php echo $form->error($model,'nombre'); ?>
+			</div>
 		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'nombre',array('size'=>15,'maxlength'=>15)); ?>
-			<?php echo $form->error($model,'nombre'); ?>
-		</div>
-	</div>
 
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'valor'); ?>
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'valor'); ?>
+				
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'valor'); ?>
+				<?php echo $form->error($model,'valor'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'estado'); ?>
 			
+			</div>
+			<div class="col-lg-10">
+				<?php echo ZHtml::enumDropDownList($model,'estado'); ?>
+				<?php echo $form->error($model,'estado'); ?>
+			</div>
 		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'valor'); ?>
-			<?php echo $form->error($model,'valor'); ?>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'direccion'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'direccion',array('size'=>50,'maxlength'=>50)); ?>
+				<?php echo $form->error($model,'direccion'); ?>
+			</div>
 		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'titulo'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'titulo',array('size'=>50,'maxlength'=>50)); ?>
+				<?php echo $form->error($model,'titulo'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'descripcion'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+				<?php echo $form->error($model,'descripcion'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'piso'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'piso',array('size'=>20,'maxlength'=>20)); ?>
+				<?php echo $form->error($model,'piso'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'tipo'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo ZHtml::enumDropDownList($model,'tipo'); ?>
+				<?php echo $form->error($model,'tipo'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'propietario'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'propietario',array('size'=>50,'maxlength'=>50)); ?>
+				<?php echo $form->error($model,'propietario'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'cantidad_banios'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'cantidad_banios'); ?>
+				<?php echo $form->error($model,'cantidad_banios'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'cantidad_habitaciones'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'cantidad_habitaciones'); ?>
+				<?php echo $form->error($model,'cantidad_habitaciones'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'superficie'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->textField($model,'superficie'); ?>
+				<?php echo $form->error($model,'superficie'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'imagen_portada'); ?>
+			
+			</div>
+			<div class="col-lg-10">	
+				<?php echo CHtml::activeFileField($model,'imagen_portada'); ?>
+				<?php echo $form->error($model,'imagen_portada'); ?>
+			</div>
+		</div>
+
 	</div>
 
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'estado'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo ZHtml::enumDropDownList($model,'estado'); ?>
-			<?php echo $form->error($model,'estado'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'direccion'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'direccion',array('size'=>50,'maxlength'=>50)); ?>
-			<?php echo $form->error($model,'direccion'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'titulo'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'titulo',array('size'=>50,'maxlength'=>50)); ?>
-			<?php echo $form->error($model,'titulo'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'descripcion'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
-			<?php echo $form->error($model,'descripcion'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-12">
-		<?php echo $form->switchGroup($model, 'amueblado',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
+	<div class="col-lg-4">
+		<div class="form-group">
+			<div class="col-lg-12">
+			<?php echo $form->switchGroup($model, 'amueblado',
+					array(
+						'widgetOptions' => array(
+							'events'=>array(
+								'switchChange'=>'js:function(event, state) {
+								  console.log(this); // DOM element
+								  console.log(event); // jQuery event
+								  console.log(state); // true | false
+								}'
+							)
 						)
 					)
-				)
-			); ?>
+				); ?>
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-		<div class="col-lg-12">
-		<?php echo $form->switchGroup($model, 'garage',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
+		<div class="form-group">
+			<div class="col-lg-12">
+			<?php echo $form->switchGroup($model, 'garage',
+					array(
+						'widgetOptions' => array(
+							'events'=>array(
+								'switchChange'=>'js:function(event, state) {
+								  console.log(this); // DOM element
+								  console.log(event); // jQuery event
+								  console.log(state); // true | false
+								}'
+							)
 						)
 					)
-				)
-			); ?>
+				); ?>
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-		<div class="col-lg-12">
-		<?php echo $form->switchGroup($model, 'jardin',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
+		<div class="form-group">
+			<div class="col-lg-12">
+			<?php echo $form->switchGroup($model, 'jardin',
+					array(
+						'widgetOptions' => array(
+							'events'=>array(
+								'switchChange'=>'js:function(event, state) {
+								  console.log(this); // DOM element
+								  console.log(event); // jQuery event
+								  console.log(state); // true | false
+								}'
+							)
 						)
 					)
-				)
-			); ?>
+				); ?>
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-		<div class="col-lg-12">
-		<?php echo $form->switchGroup($model, 'parrillero',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
+		<div class="form-group">
+			<div class="col-lg-12">
+			<?php echo $form->switchGroup($model, 'parrillero',
+					array(
+						'widgetOptions' => array(
+							'events'=>array(
+								'switchChange'=>'js:function(event, state) {
+								  console.log(this); // DOM element
+								  console.log(event); // jQuery event
+								  console.log(state); // true | false
+								}'
+							)
 						)
 					)
-				)
-			); ?>
+				); ?>
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'piso'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'piso',array('size'=>20,'maxlength'=>20)); ?>
-			<?php echo $form->error($model,'piso'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'tipo'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo ZHtml::enumDropDownList($model,'tipo'); ?>
-			<?php echo $form->error($model,'tipo'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'propietario'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'propietario',array('size'=>50,'maxlength'=>50)); ?>
-			<?php echo $form->error($model,'propietario'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-12">
-		<?php echo $form->switchGroup($model, 'prestamo_bancario',
-				array(
-					'widgetOptions' => array(
-						'events'=>array(
-							'switchChange'=>'js:function(event, state) {
-							  console.log(this); // DOM element
-							  console.log(event); // jQuery event
-							  console.log(state); // true | false
-							}'
+		<div class="form-group">
+			<div class="col-lg-12">
+			<?php echo $form->switchGroup($model, 'prestamo_bancario',
+					array(
+						'widgetOptions' => array(
+							'events'=>array(
+								'switchChange'=>'js:function(event, state) {
+								  console.log(this); // DOM element
+								  console.log(event); // jQuery event
+								  console.log(state); // true | false
+								}'
+							)
 						)
 					)
-				)
-			); ?>
+				); ?>
+			</div>
 		</div>
 	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'cantidad_banios'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'cantidad_banios'); ?>
-			<?php echo $form->error($model,'cantidad_banios'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'cantidad_habitaciones'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'cantidad_habitaciones'); ?>
-			<?php echo $form->error($model,'cantidad_habitaciones'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'superficie'); ?>
-		
-		</div>
-		<div class="col-lg-10">
-			<?php echo $form->textField($model,'superficie'); ?>
-			<?php echo $form->error($model,'superficie'); ?>
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'imagen_portada'); ?>
-		
-		</div>
-		<div class="col-lg-10">	
-			<?php echo CHtml::activeFileField($model,'imagen_portada'); ?>
-			<?php echo $form->error($model,'imagen_portada'); ?>
-		</div>
-	</div>
-
 	
 
 	<div class="form-group">
