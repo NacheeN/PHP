@@ -13,6 +13,9 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Inmuebles</h1>
+
+<h1>Alta Inmuebles</h1>
+
+
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -100,7 +100,7 @@
 		<div class="col-lg-12">
 			<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
 		</div>
-	</div>
+
 
 <?php $this->endWidget(); ?>
 
