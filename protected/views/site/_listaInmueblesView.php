@@ -38,7 +38,7 @@
             <p><?php echo CHtml::encode($data->tipo); ?></p> 
             <p>U$S <?php echo CHtml::encode($data->valor); ?></p>
             <p><?php echo CHtml::encode($data->superficie); ?> m<sup>2</sup></p>           
-            <p><?php echo CHtml::link('Vista', array('inmuebles/view', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?> <a href="#" class="btn btn-default" role="button">Comprar</a></p>
+            <p><?php echo CHtml::link('Vista', array('inmuebles/view', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?> <?php echo CHtml::link('Imagenes', array('inmuebles/imagenes', 'id'=>$data->id), array('class'=>'btn btn-default')); ?></p>
         </div>
     </div>
 </div>
