@@ -17,7 +17,9 @@ class UserIdentity extends CUserIdentity
 	 */
 
 	private $_id;
-	
+	private $_id_rol;	
+
+		
 	public function authenticate()
 	{
 		//Busco en la tabla Usuario un solo registro..
@@ -26,14 +28,16 @@ class UserIdentity extends CUserIdentity
 
 		if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif(sha1($this->password)!==$user->pass)
+		elseif($this->password!==$user->pass)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 		{
 			$this->_id=$user->id;
+			$this->_id_rol=$user->id_rol;
 			$this->setState('email',$user->email);
 			$this->setState('id',$user->id);
 			$this->errorCode=self::ERROR_NONE;
+
 		}
 		return !$this->errorCode;
 		/*
@@ -51,4 +55,10 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;
 		*/
 	}
+
+public function getId()
+	{
+		return $this->_id;
+	}
+	
 }

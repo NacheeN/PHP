@@ -12,6 +12,7 @@
  * @property string $email
  * @property string $nick
  * @property string $pass
+ * @property integer $id_rol
  *
  * The followings are the available model relations:
  * @property Eventos[] $eventoses
@@ -38,7 +39,8 @@ class Usuarios extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ci', 'required'),
+			array('ci, id_rol', 'required'),
+			array('id_rol', 'numerical', 'integerOnly'=>true),
 			array('nombre, ci', 'length', 'max'=>10),
 			array('apellido, nick', 'length', 'max'=>15),
 			array('telefono', 'length', 'max'=>20),
@@ -46,7 +48,7 @@ class Usuarios extends CActiveRecord
 			array('pass', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, apellido, ci, telefono, email, nick, pass', 'safe', 'on'=>'search'),
+			array('id, nombre, apellido, ci, telefono, email, nick, pass, id_rol', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,6 +82,7 @@ class Usuarios extends CActiveRecord
 			'email' => 'Email',
 			'nick' => 'Nick',
 			'pass' => 'Pass',
+			'id_rol' => 'Id Rol',
 		);
 	}
 
@@ -109,6 +112,7 @@ class Usuarios extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('nick',$this->nick,true);
 		$criteria->compare('pass',$this->pass,true);
+		$criteria->compare('id_rol',$this->id_rol);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
