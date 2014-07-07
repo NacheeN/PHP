@@ -49,12 +49,21 @@
                   <ul class="nav navbar-nav">
                     <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/page.html?view=about'?>">Acerca de</a></li>
                     <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/contact'?>">Contacto</a></li>
-                    <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/create'?>">Alta Usuario</a></li>
-                    <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create'?>">Alta Inmueble</a></li>
+                    <?php 
+                    	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 1))
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/create">Alta Usuario</a></li>' ?>  
+                     <?php 
+                    	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3))
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>' ?>
+
                   </ul>          
-                  <ul class="nav navbar-nav navbar-right">           
-                   <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/login'?>">Login</a></li>
-                   <li><a href="<?php echo Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/logout'?>"><?php echo 'Logout ('.Yii::app()->user->name.')'?></a></li>
+                  <ul class="nav navbar-nav navbar-right">        
+                  	 <?php 
+                    	if(Yii::app()->user->isGuest)
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/login">Login</a></li>';
+                    	else
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/site/logout">Logout('.Yii::app()->user->name.')</a></li>'; 
+                    	   ?>
                   </ul>
                 </div>
               </div>
@@ -70,7 +79,7 @@
 					)); ?><!-- breadcrumbs -->
 				<?php endif?>
 			</div><!--/ breadcrumbs -->
-
+			
 			<?php echo $content; ?>
 
 		</div><!-- /contenido -->

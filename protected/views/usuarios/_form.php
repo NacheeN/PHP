@@ -4,6 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
+<div class="well bs-component">
 <div class="form-horizontal" role="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -105,3 +106,4 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+</div>

@@ -9,8 +9,10 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Login</h1>
-
+<div class="page-header">
+  <h1 id="forms">Login</h1>
+</div>
+<div class="well bs-component">
 <div class="form-horizontal" role="form">
 	
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -57,3 +59,4 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>

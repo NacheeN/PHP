@@ -13,8 +13,10 @@ $this->menu=array(
 );
 ?>
 
+<div class="page-header">
+  <h1 id="forms">Alta Inmuebles</h1>
+</div>
 
-<h1>Alta Inmuebles</h1>
 
 
 
