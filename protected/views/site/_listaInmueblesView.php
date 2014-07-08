@@ -32,7 +32,7 @@
 
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-        <img src="<?php echo Yii::app()->request->baseUrl;?>/images/inmueble/<?php echo $data->imagen_portada?>" alt="">
+        <img data-src="holder.js/300x300" src="<?php echo Yii::app()->request->baseUrl;?>/images/inmueble/<?php echo $data->imagen_portada?>" alt="">
         <div class="caption">
             <h3><?php echo CHtml::encode($data->nombre); ?></h3>
             <p><?php echo CHtml::encode($data->tipo); ?></p> 
