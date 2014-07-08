@@ -13,6 +13,11 @@ class m140705_233614_creacion_tabla_roles_usuarios_roles extends CDbMigration
 		$this->addColumn("usuarios", "id_rol","int(11)");
 
 		$this->addForeignKey("fk_roles_usuarios", "usuarios", "id_rol", "roles", "id", "CASCADE", "RESTRICT");
+
+		$this->insert("roles", array('id'=>'1', 'nombre'=>'Administrador'));
+		$this->insert("roles", array('id'=>'2', 'nombre'=>'Administrativo'));
+		$this->insert("roles", array('id'=>'3', 'nombre'=>'Agente'));
+
 	}
 
 	public function safeDown()

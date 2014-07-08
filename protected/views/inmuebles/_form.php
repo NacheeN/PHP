@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-
+<div class="well bs-component">
 <div class="form-horizontal" role="form">
 
 <?php $form = $this->beginWidget(
@@ -32,7 +32,7 @@
 				<?php echo $form->labelEx($model,'nombre'); ?>
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'nombre',array('size'=>15,'maxlength'=>15)); ?>
+				<?php echo $form->textField($model,'nombre',array('size'=>50,'maxlength'=>15)); ?>
 				<?php echo $form->error($model,'nombre'); ?>
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 				
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'valor'); ?>
+				<?php echo $form->textField($model,'valor',array('size'=>50)); ?>
 				<?php echo $form->error($model,'valor'); ?>
 			</div>
 		</div>
@@ -83,11 +83,60 @@
 
 		<div class="form-group">
 			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'idDepartamento'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->dropDownList($model,'idDepartamento', CHtml::listData(Departamento::model()->findAll(), 'id','nombre'),
+				array(
+				'ajax' => array(
+				'type'=>'POST',
+				'url'=>CController::createUrl('site/recargaCiudades'), 
+				'update'=>'#'.CHtml::activeId($model,'idCiudad'),
+				),'prompt'=>'Seleccione')); 
+				
+				 ?>
+ 				
+				<?php echo $form->error($model,'idDepartamento'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'idCiudad'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->dropDownList($model,'idCiudad',  array(),
+				array(
+				'ajax' => array(
+				'type'=>'POST',
+				'url'=>CController::createUrl('site/recargaBarrios'), 
+				'update'=>'#'.CHtml::activeId($model,'id_barrio'),
+				),'prompt'=>'Seleccione')); ?>
+
+				<?php echo $form->error($model,'idCiudad'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'id_barrio'); ?>
+			
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->dropDownList($model,'id_barrio',  array(),array('prompt'=>'Seleccione')); ?>
+				<?php echo $form->error($model,'id_barrio'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-2">
 				<?php echo $form->labelEx($model,'descripcion'); ?>
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+				<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>52)); ?>
 				<?php echo $form->error($model,'descripcion'); ?>
 			</div>
 		</div>
@@ -98,7 +147,7 @@
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'piso',array('size'=>20,'maxlength'=>20)); ?>
+				<?php echo $form->textField($model,'piso',array('size'=>50,'maxlength'=>20)); ?>
 				<?php echo $form->error($model,'piso'); ?>
 			</div>
 		</div>
@@ -131,7 +180,7 @@
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'cantidad_banios'); ?>
+				<?php echo $form->textField($model,'cantidad_banios',array('size'=>50)); ?>
 				<?php echo $form->error($model,'cantidad_banios'); ?>
 			</div>
 		</div>
@@ -142,7 +191,7 @@
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'cantidad_habitaciones'); ?>
+				<?php echo $form->textField($model,'cantidad_habitaciones',array('size'=>50)); ?>
 				<?php echo $form->error($model,'cantidad_habitaciones'); ?>
 			</div>
 		</div>
@@ -153,7 +202,7 @@
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'superficie'); ?>
+				<?php echo $form->textField($model,'superficie',array('size'=>50)); ?>
 				<?php echo $form->error($model,'superficie'); ?>
 			</div>
 		</div>
@@ -275,5 +324,5 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
+</div>
 

@@ -9,8 +9,11 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Contactenos</h1>
+<div class="page-header">
+  <h1 id="forms">Contactenos</h1>
+</div>
 
+<div class="well bs-component">
 <div class="row">
 
 	<div class="col-lg-12">
@@ -104,7 +107,9 @@ $this->breadcrumbs=array(
 
 	<div class="form-group">
 		<div class="row">
-			<?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-default')); ?>
+			<div class="col-lg-12">
+				<?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-default')); ?>
+			</div>			
 		</div>
 	</div>
 
@@ -113,3 +118,5 @@ $this->breadcrumbs=array(
 </div><!-- form -->
 
 <?php endif; ?>
+
+</div>

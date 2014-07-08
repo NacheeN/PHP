@@ -58,6 +58,7 @@ class SiteController extends Controller
 		}
 	}
 
+
 	/**
 	 * Displays the contact page
 	 */
@@ -163,4 +164,30 @@ class SiteController extends Controller
 		}
 
 	}
+
+	public function actionRecargaCiudades()
+	{
+	    $data=Ciudad::model()->findAllByAttributes(array('id_departamento'=>array($_POST['Inmuebles']['idDepartamento'])));
+	 
+	    $data=CHtml::listData($data,'id','nombre');
+	    foreach($data as $value=>$name)
+	    {
+	        echo CHtml::tag('option',
+	                   array('value'=>$value),CHtml::encode($name),true);
+	    }
+
+	}
+
+	public function actionRecargaBarrios()
+	{
+	    $data=Barrio::model()->findAllByAttributes(array('id_ciudad'=>array($_POST['Inmuebles']['idCiudad'])));
+	 
+	    $data=CHtml::listData($data,'id','nombre');
+	    foreach($data as $value=>$name)
+	    {
+	        echo CHtml::tag('option',
+	                   array('value'=>$value),CHtml::encode($name),true);
+	    }
+	}
+	
 }

@@ -37,6 +37,9 @@
  */
 class Inmuebles extends CActiveRecord
 {
+
+	private $_id_departamento;
+	private $_id_ciudad;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -111,8 +114,9 @@ class Inmuebles extends CActiveRecord
 			'superficie' => 'Superficie',
 			'imagen_portada' => 'Imagen Portada',
 			'fecha_creacion' => 'Fecha Creacion',
-			'id_barrio' => 'Id Barrio',
+			'id_barrio' => 'Barrio',
 			'amueblado' => 'Amueblado',
+			'idDepartamento' => 'Departamento',
 		);
 	}
 
@@ -171,5 +175,45 @@ class Inmuebles extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function getIdDepartamento()
+	{
+		return $this->_id_departamento;
+	}
+
+	public function setIdDepartamento($idDepartamento)
+	{
+		return $this->_id_departamento = $idDepartamento;
+	}
+
+	public function getIdCiudad()
+	{
+		return $this->_id_ciudad;
+	}
+
+	public function setIdCiudad($idCiudad)
+	{
+		return $this->_id_ciudad = $idCiudad;
+	}
+
+	/**
+	* @return array of valid users for this project, indexed by user IDs
+	*/
+	public function getDepartamentos()
+	{		
+		$rolesArray = CHtml::listData(Departamento::model()->findAll(), 'id','nombre');
+		return $rolesArray;
+	}
+
+
+
+	/**
+	* @return array of valid users for this project, indexed by user IDs
+	*/
+	public function getBarrios()
+	{		
+		$rolesArray = CHtml::listData(Departamento::model()->findAll(), 'id','nombre');
+		return $rolesArray;
 	}
 }

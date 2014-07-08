@@ -69,9 +69,6 @@ class InmueblesController extends Controller
 		$d=new Departamento;
 
 		$model->id_usuario=Yii::app()->user->id;
-		$model->id_barrio=1;
-		$model->idBarrio->id_departamento=1;
-		$model->idBarrio->id_ciudad=1;
 		if(isset($_POST['Inmuebles']))
 		{
 			$model->attributes=$_POST['Inmuebles'];
@@ -238,4 +235,6 @@ class InmueblesController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+
 }

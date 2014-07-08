@@ -13,6 +13,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Solicitudes</h1>
+<div class="page-header">
+  <h1 id="forms">Create Solicitudes</h1>
+</div>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
