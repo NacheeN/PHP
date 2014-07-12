@@ -30,19 +30,14 @@
 		</div>
 -->
 		<div class="form-group">
-			<?php 
-				$this->widget('CMultiFileUpload',
-					array(
-						'model'=>$model,
-						'name'=>'ruta',
-						'attribute'=>'ruta',
-						'accept'=>'jpg|gif|png',
-						'denied'=>'Este tipo no esta permitido',
-						'max'=>10,
-						'duplicate'=>'Archivo Dublicado',
-						));
-			 ?>
-			 <?php echo $form->error($model,'ruta'); ?>
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'ruta'); ?>
+			
+			</div>
+			<div class="col-lg-10">	
+				<?php echo CHtml::activeFileField($model,'ruta'); ?>
+				<?php echo $form->error($model,'ruta'); ?>	
+			</div>
 
 		</div>
 
@@ -51,7 +46,9 @@
 				<?php echo CHtml::submitButton($model->isNewRecord ? 'Agregar Imagenes' : 'Save', array('class'=>'btn btn-default')); ?>
 			</div>
 		</div>
+		<?php $this->endWidget(); ?>
 
-<?php $this->endWidget(); ?>
+		
+		
 
 </div><!-- form -->

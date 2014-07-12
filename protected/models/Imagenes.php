@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $id_inmueble
  * @property string $ruta
+ * @property string $descripcion
  *
  * The followings are the available model relations:
  * @property Inmuebles $idInmueble
@@ -29,12 +30,13 @@ class Imagenes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_inmueble', 'required'),
+			array('id_inmueble, descripcion', 'required'),
 			array('id_inmueble', 'numerical', 'integerOnly'=>true),
-			array('ruta', 'length', 'max'=>50),
+			array('descripcion', 'length', 'max'=>255),
+			array('ruta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_inmueble, ruta', 'safe', 'on'=>'search'),
+			array('id, id_inmueble, ruta, descripcion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +61,7 @@ class Imagenes extends CActiveRecord
 			'id' => 'ID',
 			'id_inmueble' => 'Id Inmueble',
 			'ruta' => 'Ruta',
+			'descripcion' => 'Descripcion',
 		);
 	}
 
@@ -83,6 +86,7 @@ class Imagenes extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('id_inmueble',$this->id_inmueble);
 		$criteria->compare('ruta',$this->ruta,true);
+		$criteria->compare('descripcion',$this->descripcion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

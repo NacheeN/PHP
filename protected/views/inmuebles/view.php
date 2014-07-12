@@ -81,6 +81,9 @@ $this->menu=array(
 
         </form>
     </div>        
+    <div class="tab-pane" id="tab_c">
+        
+    </div>        
 </div><!-- tab content -->
 
 
