@@ -1,23 +1,30 @@
 <?php
 
 /**
- * This is the model class for table "roles".
+ * This is the model class for table "eventos".
  *
- * The followings are the available columns in table 'roles':
+ * The followings are the available columns in table 'eventos':
  * @property integer $id
- * @property string $nombre
+ * @property integer $id_cliente
+ * @property integer $id_agente
+ * @property integer $id_inmueble
+ * @property string $titulo
+ * @property string $fecha_hora_desde
+ * @property string $fecha_hora_hasta
  *
  * The followings are the available model relations:
- * @property Usuarios[] $usuarioses
+ * @property Inmuebles $idInmueble
+ * @property Usuarios $idAgente
+ * @property Usuarios $idCliente
  */
-class Roles extends CActiveRecord
+class Eventos extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'roles';
+		return 'eventos';
 	}
 
 	/**
@@ -28,11 +35,13 @@ class Roles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre', 'required'),
-			array('nombre', 'length', 'max'=>255),
+			array('id_cliente, id_agente, id_inmueble', 'required'),
+			array('id_cliente, id_agente, id_inmueble', 'numerical', 'integerOnly'=>true),
+			array('titulo', 'length', 'max'=>50),
+			array('fecha_hora_desde, fecha_hora_hasta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre', 'safe', 'on'=>'search'),
+			array('id, id_cliente, id_agente, id_inmueble, titulo, fecha_hora_desde, fecha_hora_hasta', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,7 +53,9 @@ class Roles extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'usuario' => array(self::HAS_MANY, 'Usuarios', 'id_rol'),
+			'idInmueble' => array(self::BELONGS_TO, 'Inmuebles', 'id_inmueble'),
+			'idAgente' => array(self::BELONGS_TO, 'Usuarios', 'id_agente'),
+			'idCliente' => array(self::BELONGS_TO, 'Usuarios', 'id_cliente'),
 		);
 	}
 
@@ -55,7 +66,12 @@ class Roles extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nombre' => 'Nombre',
+			'id_cliente' => 'Id Cliente',
+			'id_agente' => 'Id Agente',
+			'id_inmueble' => 'Id Inmueble',
+			'titulo' => 'Titulo',
+			'fecha_hora_desde' => 'Fecha Hora Desde',
+			'fecha_hora_hasta' => 'Fecha Hora Hasta',
 		);
 	}
 
@@ -78,7 +94,12 @@ class Roles extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('id_cliente',$this->id_cliente);
+		$criteria->compare('id_agente',$this->id_agente);
+		$criteria->compare('id_inmueble',$this->id_inmueble);
+		$criteria->compare('titulo',$this->titulo,true);
+		$criteria->compare('fecha_hora_desde',$this->fecha_hora_desde,true);
+		$criteria->compare('fecha_hora_hasta',$this->fecha_hora_hasta,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,7 +110,7 @@ class Roles extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Roles the static model class
+	 * @return Eventos the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
