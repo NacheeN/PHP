@@ -4,8 +4,8 @@
 
 $this->breadcrumbs=array(
 	'Inmuebles'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	$model->titulo=>array('view','id'=>$model->titulo),
+	'Modificar',
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Inmuebles <?php echo $model->id; ?></h1>
+<h1>Modificar Inmuebles - <?php echo $model->titulo; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

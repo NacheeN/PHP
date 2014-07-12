@@ -12,6 +12,9 @@ $this->pageTitle=Yii::app()->name;
 #)); ?>
 -->
 <?php 
+
+if ( Yii::app()->user->isGuest ) { 
+	
 echo CHtml::openTag('div', array('class' => 'row-fluid'));
 $this->widget(
     'booster.widgets.TbThumbnails',
@@ -22,5 +25,23 @@ $this->widget(
     )
 );
 echo CHtml::closeTag('div');
+
+}
+else if(Yii::app()->user->rol == 3)
+{
+
+	echo CHtml::openTag('div', array('class' => 'row-fluid'));
+	$this->widget(
+	    'booster.widgets.TbThumbnails',
+	    array(
+	        'dataProvider' => $dataProvider,
+	        'template' => "{items}\n{pager}",
+	        'itemView' => '_listaInmueblesAgente',
+	    )
+	);
+	echo CHtml::closeTag('div');
+}
+
+
 
 ?>

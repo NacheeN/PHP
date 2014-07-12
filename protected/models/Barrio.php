@@ -48,8 +48,8 @@ class Barrio extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idCiudad' => array(self::BELONGS_TO, 'Ciudad', 'id_ciudad'),
-			'idDepartamento' => array(self::BELONGS_TO, 'Departamento', 'id_departamento'),
+			'ciudad' => array(self::BELONGS_TO, 'Ciudad', 'id_ciudad'),
+			'departamento' => array(self::BELONGS_TO, 'Departamento', 'id_departamento'),
 		);
 	}
 

@@ -3,9 +3,9 @@
 /* @var $model Usuarios */
 
 $this->breadcrumbs=array(
-	'Usuarioses'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Usuarios'=>array('index'),
+	$model->id=>array('view','id'=>$model->nick),
+	'Modificar',
 );
 
 $this->menu=array(

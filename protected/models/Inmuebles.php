@@ -82,8 +82,8 @@ class Inmuebles extends CActiveRecord
 			'destacadoses' => array(self::HAS_MANY, 'Destacados', 'id_inmueble'),
 			'eventoses' => array(self::HAS_MANY, 'Eventos', 'id_inmueble'),
 			'imagenes' => array(self::HAS_MANY, 'Imagenes', 'id_inmueble'),
-			'idBarrio' => array(self::BELONGS_TO, 'Barrio', 'id_barrio'),
-			'idUsuario' => array(self::BELONGS_TO, 'Usuarios', 'id_usuario'),
+			'barrio' => array(self::BELONGS_TO, 'Barrio', 'id_barrio'),
+			'usuario' => array(self::BELONGS_TO, 'Usuarios', 'id_usuario'),
 			'operacions' => array(self::HAS_MANY, 'Operacion', 'id_inmueble'),
 		);
 	}

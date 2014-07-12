@@ -65,6 +65,7 @@ class Usuarios extends CActiveRecord
 			'inmuebles' => array(self::HAS_MANY, 'Inmuebles', 'id_usuario'),
 			'operacions' => array(self::HAS_MANY, 'Operacion', 'id_usuario'),
 			'solicitudes' => array(self::HAS_MANY, 'Solicitudes', 'id_usuario'),
+			'rol' => array(self::BELONGS_TO, 'Roles', 'id_rol'),
 		);
 	}
 

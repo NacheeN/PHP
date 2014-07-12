@@ -1,6 +1,6 @@
 <?php
 
-class InmueblesController extends Controller
+class EventosController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,11 +32,11 @@ class InmueblesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes','delete'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin'),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -60,41 +60,24 @@ class InmueblesController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
-		$model=new Inmuebles;
+		$model=new Eventos;
 
-		$b=new Barrio;
-		$c=new Ciudad;
-		$d=new Departamento;
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		$model->id_inmueble=$id;
+		$model->id_agente=Yii::app()->user->id;
 
-		$model->id_usuario=Yii::app()->user->id;
-		if(isset($_POST['Inmuebles']))
+		if(isset($_POST['Eventos']))
 		{
-			$model->attributes=$_POST['Inmuebles'];
-
-			$uploadedFile=CUploadedFile::getInstance($model,'imagen_portada');
-			$aleatorio = rand(100000, 999999);
-			$fileName = $aleatorio."{$uploadedFile}"; //file name
-           
-			if(!empty($uploadedFile))  // check if uploaded file is set or not
-            {
-              	
-               	$uploadedFile->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$fileName);
-                $model->imagen_portada = $fileName;
-            }
-
+			$model->attributes=$_POST['Eventos'];
 			if($model->save())
-			{
-				$this->redirect(array('imagenes','id'=>$model->id));
-			}
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'ciudad'=>$c,
-			'dep'=>$d,
-			'barrio'=>$b,
 		));
 	}
 
@@ -109,10 +92,10 @@ class InmueblesController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		$model->id_usuario=Yii::app()->user->id;
-		if(isset($_POST['Inmuebles']))
+
+		if(isset($_POST['Eventos']))
 		{
-			$model->attributes=$_POST['Inmuebles'];
+			$model->attributes=$_POST['Eventos'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -136,60 +119,89 @@ class InmueblesController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	public function actionImagenes($id)
-	{
-		$model=new Imagenes;
-		
-		if(isset($_POST['Imagenes']))
-		{
 
-			$model->id_inmueble=$id;
-			$model->attributes=$_POST['Imagenes'];
-			
-			$images=CUploadedFile::getInstancesByName('ruta');
+	public function draw_calendar($month,$year){
 
-			if(count($images)===0)
-			{
-				$msg="Nos has seleccionado ninguna imagen";
-			}
-			else if(!$imagenes->validate())
-			{
-				$msg="error al enviar el formulario";
-			}
-			else
-			{
-				foreach ($images as $image => $value) 
-				{
-					$aleatorio = rand(100000, 999999);
-					$nombre = $aleatorio.'-'.$value->nombre;
-					$value->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$nombre);
-					
-					$model->id_inmueble=$id;
-					$model->ruta=$nombre;
+		/* draw table */
+		$calendar = '<table cellpadding="0" cellspacing="0" class="table calendar">';
 
-				}
+		/* table headings */
+		$headings = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+		$calendar.= '<tr class="calendar-row"><td class="calendar-day-head">'.implode('</td><td class="calendar-day-head">',$headings).'</td></tr>';
+
+		/* days and weeks vars now ... */
+		$running_day = date('w',mktime(0,0,0,$month,1,$year));
+		$days_in_month = date('t',mktime(0,0,0,$month,1,$year));
+		$days_in_this_week = 1;
+		$day_counter = 0;
+		$dates_array = array();
+
+		/* row for week one */
+		$calendar.= '<tr class="calendar-row">';
+
+		/* print "blank" days until the first of the current week */
+		for($x = 0; $x < $running_day; $x++):
+			$calendar.= '<td class="calendar-day-np"> </td>';
+			$days_in_this_week++;
+		endfor;
+
+		/* keep going with days.... */
+		for($list_day = 1; $list_day <= $days_in_month; $list_day++):
+			$calendar.= '<td class="calendar-day">';
+				/* add in the day number */
+				$calendar.= '<div class="day-number">'.$list_day.'</div>';
+
+				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
+				$calendar.= str_repeat('<p> </p>',2);
 				
-				if($model->save())
-				$this->redirect(array('site/index'));
-			}
+			$calendar.= '</td>';
+			if($running_day == 6):
+				$calendar.= '</tr>';
+				if(($day_counter+1) != $days_in_month):
+					$calendar.= '<tr class="calendar-row">';
+				endif;
+				$running_day = -1;
+				$days_in_this_week = 0;
+			endif;
+			$days_in_this_week++; $running_day++; $day_counter++;
+		endfor;
 
-			
-		}
+		/* finish the rest of the days in the week */
+		if($days_in_this_week < 8):
+			for($x = 1; $x <= (8 - $days_in_this_week); $x++):
+				$calendar.= '<td class="calendar-day-np"> </td>';
+			endfor;
+		endif;
 
+		/* final row */
+		$calendar.= '</tr>';
+
+		/* end the table */
+		$calendar.= '</table>';
 		
-		$this->render('imagenes',array(
-			'model'=>$model,
-		));
+		/* all done, return result */
+		return $calendar;
 	}
-	
+
+
+
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Inmuebles');
+		$dataProvider=new CActiveDataProvider('Eventos');
+
+		$model=new Eventos;
+
+		$calendario = $this->draw_calendar(7,2009);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'calendario'=>$calendario,
 		));
 	}
 
@@ -198,26 +210,28 @@ class InmueblesController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Inmuebles('search');
+		$model=new Eventos('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Inmuebles']))
-			$model->attributes=$_GET['Inmuebles'];
+		if(isset($_GET['Eventos']))
+			$model->attributes=$_GET['Eventos'];
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
 
+	
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Inmuebles the loaded model
+	 * @return Eventos the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Inmuebles::model()->findByPk($id);
+		$model=Eventos::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -225,16 +239,16 @@ class InmueblesController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Inmuebles $model the model to be validated
+	 * @param Eventos $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='inmuebles-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='eventos-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
 
-
+	
 }

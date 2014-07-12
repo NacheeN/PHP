@@ -15161,3 +15161,747 @@ in E:\xampp\htdocs\PHP\index.php (13)
 2014/07/08 21:53:09 [warning] [application] Error al establecer unsafe al atributo "idCiudad" de "Inmuebles".
 in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (74)
 in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/09 02:56:47 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."id_rol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('id_rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(69): CWebUser->__get('id_rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 02:57:03 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."id_rol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('id_rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(69): CWebUser->__get('id_rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 02:57:38 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(69): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 02:57:46 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(69): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 02:57:47 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(69): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:39 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:42 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:52 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:53 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:53 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:53 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:54 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:15:54 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idRol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idRol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idRol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:19 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:20 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:20 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:21 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:21 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:17:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."idrol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idrol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('idrol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:37:18 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."rol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:38:03 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."rol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:51:53 [error] [exception.CException] exception 'CException' with message 'El alias "booster.widgets.TbThumbnails" es inválido. Asegúrese de que apunta a un directorio o archivo existente.' in C:\wamp\www\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'booster.widgets...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\wamp\www\PHP\protected\views\site\index.php(23): CBaseController->widget('booster.widgets...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:53:48 [error] [exception.CException] exception 'CException' with message 'El alias "booster.widgets.TbThumbnails" es inválido. Asegúrese de que apunta a un directorio o archivo existente.' in C:\wamp\www\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'booster.widgets...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\wamp\www\PHP\protected\views\site\index.php(23): CBaseController->widget('booster.widgets...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:54:03 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."rol" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:54:48 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/09 03:56:25 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 C:\wamp\www\PHP\protected\views\layouts\main.php(51): CWebUser->__get('rol')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#5 C:\wamp\www\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/usuarios/create
+---
+2014/07/10 02:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajax_calendario.php".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajax_calendario...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/ajax_calendario.php?mes=&anio=&accion=generar_calendario&_=1404953056054
+HTTP_REFERER=http://localhost:90/PHP/eventos
+---
+2014/07/10 23:55:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/estilo_calendario.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/estilo_cale...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/estilo_calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 00:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajax_calendario.php".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajax_calendario...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/ajax_calendario.php?mes=&anio=&accion=generar_calendario&_=1405033027043
+HTTP_REFERER=http://localhost:90/PHP/eventos
+---
+2014/07/11 01:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ajax_calendario.php".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajax_calendario...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/ajax_calendario.php?mes=&anio=&accion=generar_calendario&_=1405033455085
+HTTP_REFERER=http://localhost:90/PHP/eventos
+---
+2014/07/11 01:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "calendario".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('calendario')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('calendario')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('eventos/calenda...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/eventos/calendario?mes=&anio=&accion=generar_calendario&_=1405033557119
+HTTP_REFERER=http://localhost:90/PHP/eventos
+---
+2014/07/11 02:53:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PHP/inmuebles/delete/14.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 02:54:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/16.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 03:03:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('eventos/index')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/eventos/index
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 03:04:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/14.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 03:04:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/14.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/11 03:16:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/14.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/12 21:19:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/12 22:35:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/12 22:37:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes
+---

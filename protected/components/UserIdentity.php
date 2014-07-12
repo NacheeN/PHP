@@ -33,9 +33,11 @@ class UserIdentity extends CUserIdentity
 		else
 		{
 			$this->_id=$user->id;
-			$this->_id_rol=$user->id_rol;
+			//$this->_id_rol=$user->id_rol;
 			$this->setState('email',$user->email);
 			$this->setState('id',$user->id);
+			$this->setState('rol',$user->id_rol);
+
 			$this->errorCode=self::ERROR_NONE;
 
 		}
@@ -56,7 +58,8 @@ class UserIdentity extends CUserIdentity
 		*/
 	}
 
-public function getId()
+	
+	public function getId()
 	{
 		return $this->_id;
 	}
