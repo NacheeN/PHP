@@ -32,13 +32,13 @@ class EventosController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','calendarevents','view','admin','delete'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
-			//array('allow', // allow admin user to perform 'admin' and 'delete' actions
-			//	'actions'=>array('admin','delete'),
-			//	'users'=>array('admin'),
-			//),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				'users'=>array('admin'),
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -51,19 +51,9 @@ class EventosController extends Controller
 	 */
 	public function actionView($id)
 	{
-		if (@$_GET['asModal']==true)
-        {
-            $this->renderPartial('view',
-                array('model'=>$this->loadModel($id)),false,true
-            );
-        }
-        else{
-            //$this->layout = 'column2';
-            $this->render('view',array(
-                'model'=>$this->loadModel($id),
-            ));
-        }
-
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
 	}
 
 	/**
@@ -78,14 +68,12 @@ class EventosController extends Controller
 		// $this->performAjaxValidation($model);
 		$model->id_inmueble=$id;
 		$model->id_agente=Yii::app()->user->id;
-		$model->id_cliente=Yii::app()->user->id;
 
 		if(isset($_POST['Eventos']))
 		{
 			$model->attributes=$_POST['Eventos'];
 			if($model->save())
-				//$this->redirect(array('view','id'=>$model->id));
-				$this->redirect(array('index'));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -131,6 +119,72 @@ class EventosController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
+
+	public function draw_calendar($month,$year){
+
+		/* draw table */
+		$calendar = '<table cellpadding="0" cellspacing="0" class="table calendar">';
+
+		/* table headings */
+		$headings = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+		$calendar.= '<tr class="calendar-row"><td class="calendar-day-head">'.implode('</td><td class="calendar-day-head">',$headings).'</td></tr>';
+
+		/* days and weeks vars now ... */
+		$running_day = date('w',mktime(0,0,0,$month,1,$year));
+		$days_in_month = date('t',mktime(0,0,0,$month,1,$year));
+		$days_in_this_week = 1;
+		$day_counter = 0;
+		$dates_array = array();
+
+		/* row for week one */
+		$calendar.= '<tr class="calendar-row">';
+
+		/* print "blank" days until the first of the current week */
+		for($x = 0; $x < $running_day; $x++):
+			$calendar.= '<td class="calendar-day-np"> </td>';
+			$days_in_this_week++;
+		endfor;
+
+		/* keep going with days.... */
+		for($list_day = 1; $list_day <= $days_in_month; $list_day++):
+			$calendar.= '<td class="calendar-day">';
+				/* add in the day number */
+				$calendar.= '<div class="day-number">'.$list_day.'</div>';
+
+				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
+				$calendar.= str_repeat('<p> </p>',2);
+				
+			$calendar.= '</td>';
+			if($running_day == 6):
+				$calendar.= '</tr>';
+				if(($day_counter+1) != $days_in_month):
+					$calendar.= '<tr class="calendar-row">';
+				endif;
+				$running_day = -1;
+				$days_in_this_week = 0;
+			endif;
+			$days_in_this_week++; $running_day++; $day_counter++;
+		endfor;
+
+		/* finish the rest of the days in the week */
+		if($days_in_this_week < 8):
+			for($x = 1; $x <= (8 - $days_in_this_week); $x++):
+				$calendar.= '<td class="calendar-day-np"> </td>';
+			endfor;
+		endif;
+
+		/* final row */
+		$calendar.= '</tr>';
+
+		/* end the table */
+		$calendar.= '</table>';
+		
+		/* all done, return result */
+		return $calendar;
+	}
+
+
+
 	/**
 	 * Lists all models.
 	 */
@@ -140,12 +194,14 @@ class EventosController extends Controller
 
 		$model=new Eventos;
 
-		//$calendarEventsUrl = $this->actionCalendarEvents();
+		$calendario = $this->draw_calendar(7,2009);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-			//'calendario'=>$calendario,
-			//'calendarEventsUrl'=>$calendarEventsUrl,
+			'calendario'=>$calendario,
 		));
 	}
 
@@ -193,27 +249,6 @@ class EventosController extends Controller
 			Yii::app()->end();
 		}
 	}
-	
-	public function actionCalendarEvents()
-	{
 
-		$items = array();
-        $model=Eventos::model()->findAll();    
-
-	    foreach ($model as $value) {
-            $items[]=array(
-            	'id'=>$value->id,
-                'title'=>$value->titulo,
-                'start'=>$value->fecha_hora_desde,
-               	//'end'=>date('Y-m-d', strtotime('+1 day', strtotime($value->fecha_hora_hasta))),
-                'end'=>$value->fecha_hora_hasta,
-                'url'=>'#',
-                //'allDay'=>true,
-                //'color'=>'blue',
-            );
-        }
-        echo CJSON::encode($items);
-        Yii::app()->end();
-	}
 	
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.css" media="screen">
     <link rel="stylesheet" href="http://bootswatch.com/assets/css/bootswatch.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/estilo_inmobiliaria.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/calendario.css" />
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,12 +47,6 @@
                     	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3))
                       {
                     		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/index">Calendario</a></li>';
-                      }
-                        ?>
-                      <?php 
-                      if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 2))
-                      {
-                        echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/create">Clientes</a></li>';
                       }
                         ?>
                       
