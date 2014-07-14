@@ -189,5 +189,27 @@ class SiteController extends Controller
 	                   array('value'=>$value),CHtml::encode($name),true);
 	    }
 	}
+
+	public function actionLlamar()
+    {
+        try 
+        { 
+            $client = new SoapClient("http://www.webservicex.net/FinanceService.asmx?WSDL",
+              array('cache_wsdl' => WSDL_CACHE_NONE,'trace' => TRUE));
+            $param = array(
+                            'LoanAmount' => '50000',
+                            'InterestRate' => '6',
+                            'Months' => '300'
+                            );
+         
+            $ready = $client->LoanMonthlyPayment($param) ->LoanMonthlyPaymentResult;
+
+            echo "<script type='text/javascript'>alert('US$ $ready');</script>";
+
+        } catch (Exception $e) {
+
+            trigger_error($e->getMessage(), E_USER_WARNING);
+        }
+    }          
 	
 }

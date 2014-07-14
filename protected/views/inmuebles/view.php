@@ -147,13 +147,13 @@ $this->menu=array(
         <h2>Calcule su préstamo</h2>
         <p class="intro"></p>
 
-        <form target="_blank" action="http://www.webservicex.net/FinanceService.asmx/LoanMonthlyPayment" method="GET">                      
+        <form target="_blank" method="GET">                      
           
           <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
           <tbody>
           <tr>
             <td class="frmText" style="color: #000000; font-weight: normal;">Valor del inmueble (US$):</td>
-            <td><input class="frmInput" type="text" size="50" name="LoanAmount"></td>
+            <td><input class="frmInput" type="text" size="50" name="LoanAmount" id="LoanAmount"></td>
           </tr>
         
           <tr>
@@ -168,7 +168,7 @@ $this->menu=array(
           
           <tr>
             <td></td>
-            <td align="right"> <input type="submit" value="Calcular" class="button"></td>
+            <td align="right"> <?php echo CHtml::link('Calcular', array('site/llamar'), array('class'=>'btn btn-default')); ?></td>
           </tr>
           </tbody></table>          
 

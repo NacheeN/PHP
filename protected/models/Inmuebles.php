@@ -12,6 +12,7 @@
  * @property string $direccion
  * @property string $titulo
  * @property string $descripcion
+ * @property integer $amueblado
  * @property integer $garage
  * @property integer $jardin
  * @property integer $parrillero
@@ -25,7 +26,8 @@
  * @property string $imagen_portada
  * @property string $fecha_creacion
  * @property integer $id_barrio
- * @property integer $amueblado
+ * @property integer $activo
+ * @property string $operacion
  *
  * The followings are the available model relations:
  * @property Destacados[] $destacadoses
@@ -38,8 +40,9 @@
 class Inmuebles extends CActiveRecord
 {
 
-	private $_id_departamento;
-	private $_id_ciudad;
+	const TIPO_VENTA='VENTA';
+	const TIPO_ALQUILER='ALQUILER';
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -56,18 +59,18 @@ class Inmuebles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario, id_barrio', 'required'),
-			array('id_usuario, garage, jardin, parrillero, piso, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, id_barrio, amueblado', 'numerical', 'integerOnly'=>true),
+			array('id_usuario, operacion', 'required'),
+			array('id_usuario, amueblado, garage, jardin, parrillero, piso, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, id_barrio, activo', 'numerical', 'integerOnly'=>true),
 			array('valor', 'numerical'),
-			array('imagen_portada','file','types'=>'jpg, jpeg, png, gif', 'allowEmpty'=>true, 'on'=>'update'),
 			array('nombre', 'length', 'max'=>15),
 			array('estado', 'length', 'max'=>20),
-			array('direccion, titulo, propietario, imagen_portada', 'length', 'max'=>50),
+			array('direccion, titulo, propietario', 'length', 'max'=>50),
 			array('tipo', 'length', 'max'=>7),
-			array('descripcion, fecha_creacion', 'safe'),
+			array('operacion', 'length', 'max'=>255),
+			array('descripcion, imagen_portada, fecha_creacion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, imagen_portada, fecha_creacion, id_barrio, amueblado', 'safe', 'on'=>'search'),
+			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, amueblado, garage, jardin, parrillero, piso, tipo, propietario, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, imagen_portada, fecha_creacion, id_barrio, activo, operacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -102,6 +105,7 @@ class Inmuebles extends CActiveRecord
 			'direccion' => 'Direccion',
 			'titulo' => 'Titulo',
 			'descripcion' => 'Descripcion',
+			'amueblado' => 'Amueblado',
 			'garage' => 'Garage',
 			'jardin' => 'Jardin',
 			'parrillero' => 'Parrillero',
@@ -114,8 +118,9 @@ class Inmuebles extends CActiveRecord
 			'superficie' => 'Superficie',
 			'imagen_portada' => 'Imagen Portada',
 			'fecha_creacion' => 'Fecha Creacion',
-			'id_barrio' => 'Barrio',
-			'amueblado' => 'Amueblado',
+			'id_barrio' => 'Id Barrio',
+			'activo' => 'Activo',
+			'operacion' => 'Operacion',
 			'idDepartamento' => 'Departamento',
 		);
 	}
@@ -146,6 +151,7 @@ class Inmuebles extends CActiveRecord
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('titulo',$this->titulo,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
+		$criteria->compare('amueblado',$this->amueblado);
 		$criteria->compare('garage',$this->garage);
 		$criteria->compare('jardin',$this->jardin);
 		$criteria->compare('parrillero',$this->parrillero);
@@ -159,7 +165,8 @@ class Inmuebles extends CActiveRecord
 		$criteria->compare('imagen_portada',$this->imagen_portada,true);
 		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('id_barrio',$this->id_barrio);
-		$criteria->compare('amueblado',$this->amueblado);
+		$criteria->compare('activo',$this->activo);
+		$criteria->compare('operacion',$this->operacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -178,42 +185,17 @@ class Inmuebles extends CActiveRecord
 	}
 
 	public function getIdDepartamento()
-	{
-		return $this->_id_departamento;
-	}
-
-	public function setIdDepartamento($idDepartamento)
-	{
-		return $this->_id_departamento = $idDepartamento;
-	}
-
+	{}
 	public function getIdCiudad()
+	{}
+
+	public function getTypeOptions()
 	{
-		return $this->_id_ciudad;
+		return array(
+			self::TIPO_VENTA=>'VENTA',
+			self::TIPO_ALQUILER=>'ALQUILER',
+			);
 	}
 
-	public function setIdCiudad($idCiudad)
-	{
-		return $this->_id_ciudad = $idCiudad;
-	}
-
-	/**
-	* @return array of valid users for this project, indexed by user IDs
-	*/
-	public function getDepartamentos()
-	{		
-		$rolesArray = CHtml::listData(Departamento::model()->findAll(), 'id','nombre');
-		return $rolesArray;
-	}
-
-
-
-	/**
-	* @return array of valid users for this project, indexed by user IDs
-	*/
-	public function getBarrios()
-	{		
-		$rolesArray = CHtml::listData(Departamento::model()->findAll(), 'id','nombre');
-		return $rolesArray;
-	}
+	
 }
