@@ -35,6 +35,8 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
+<?php echo CHtml::link('Crear','Create',array('class'=>'btn btn-default')); ?>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'usuarios-grid',
 	'dataProvider'=>$model->search(),
