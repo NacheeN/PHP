@@ -29,23 +29,19 @@
 			</div>
 		</div>
 -->
-		<div class="form-group">
-			<div class="col-lg-2">
-				<?php echo $form->labelEx($model,'ruta'); ?>
-			
-			</div>
-			<div class="col-lg-10">	
-				<?php echo CHtml::activeFileField($model,'ruta'); ?>
-				<?php echo $form->error($model,'ruta'); ?>	
-			</div>
+		<?php $imagenes=Imagenes::model()->findAllByAttributes(array('id_inmueble'=>array($_GET['id_inmueble'])));
 
-		</div>
-
-		<div class="form-group">
-			<div class="col-lg-12">
-				<?php echo CHtml::submitButton($model->isNewRecord ? 'Agregar Imagenes' : 'Save', array('class'=>'btn btn-default')); ?>
-			</div>
-		</div>
+		foreach ($imagenes as $imagen) 
+		{
+			echo '<div class="col-sm-6 col-md-4" style="margin-top:50px">';
+			echo '<div class="thumbnail" style="height:320px">';
+			echo '<img src="'.Yii::app()->request->baseUrl.'/images/inmueble/'.$imagen->ruta.'" alt="" style="height:250px">';			
+			echo '<div class="caption">';
+			echo '<h3>'.$imagen->descripcion.'</h3>';
+			echo '</div>';	
+			echo '</div>';	
+			echo '</div>';
+		}?>
 		<?php $this->endWidget(); ?>
 
 		

@@ -27,7 +27,7 @@ $this->widget(
 echo CHtml::closeTag('div');
 
 }
-else if(Yii::app()->user->rol == 3)
+else if(Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3)
 {
 
 	echo CHtml::openTag('div', array('class' => 'row-fluid'));

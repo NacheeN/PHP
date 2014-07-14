@@ -15683,3 +15683,2290 @@ Stack trace:
 REQUEST_URI=/PHP/imagenes/%3C?php%20echo%20Yii::app()-%3Erequest-%3EbaseUrl;?%3E/images/inmueble/%3C?php%20echo%20$imagen-%3Eruta?%3E
 HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
 ---
+2014/07/13 00:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:47:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:48:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:49:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:52:36 [error] [exception.CException] exception 'CException' with message 'Alias "ext.carouFredSel.ECarouFredSel" is invalid. Make sure it points to an existing PHP file and the file is readable.' in E:\xampp\htdocs\yii\framework\YiiBase.php:322
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.carouFredSe...', true)
+#1 E:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(ImagenesController), 'ext.carouFredSe...', Array)
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.carouFredSe...', Array)
+#3 E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php(66): CBaseController->widget('ext.carouFredSe...', Array)
+#4 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#7 E:\xampp\htdocs\PHP\protected\views\imagenes\create.php(23): CController->renderPartial('_form', Array)
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(92): CController->render('create', Array)
+#13 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionCreate()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/create')
+#24 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:53:21 [error] [php] Undefined variable: listDataProvider (E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php:54)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\PHP\protected\views\imagenes\create.php(23): ImagenesController->renderPartial()
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#6 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(92): ImagenesController->render()
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionCreate()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#10 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#13 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#16 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#17 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes/create.html?id_inmueble=17
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php (54)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\create.php (23)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (92)
+2014/07/13 00:53:48 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootSlider" is invalid. Make sure it points to an existing directory or file.' in E:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 E:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(ImagenesController), 'bootstrap.widge...', Array)
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php(68): CBaseController->widget('bootstrap.widge...', Array)
+#4 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#7 E:\xampp\htdocs\PHP\protected\views\imagenes\create.php(23): CController->renderPartial('_form', Array)
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(92): CController->render('create', Array)
+#13 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionCreate()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/create')
+#24 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 00:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:20:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:22:32 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 E:\xampp\htdocs\PHP\protected\views\site\index.php(30): CWebUser->__get('rol')
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:25:30 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 E:\xampp\htdocs\PHP\protected\views\site\index.php(30): CWebUser->__get('rol')
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/
+---
+2014/07/13 01:25:44 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 E:\xampp\htdocs\PHP\protected\views\site\index.php(30): CWebUser->__get('rol')
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/
+---
+2014/07/13 01:26:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inex".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inex')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/inex
+---
+2014/07/13 01:26:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inex
+---
+2014/07/13 01:26:02 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.rol" is not defined.' in E:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('rol')
+#1 E:\xampp\htdocs\PHP\protected\views\site\index.php(30): CWebUser->__get('rol')
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 E:\xampp\htdocs\PHP\protected\controllers\SiteController.php(43): CController->render('index', Array)
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/
+HTTP_REFERER=http://localhost:90/PHP/inex
+---
+2014/07/13 01:28:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:28:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:28:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:28:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login
+---
+2014/07/13 01:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/usuarios/admin
+---
+2014/07/13 01:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login
+---
+2014/07/13 01:31:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:31:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login.html
+---
+2014/07/13 01:32:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:32:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login.html
+---
+2014/07/13 01:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:35:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login.html
+---
+2014/07/13 01:35:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:35:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?id_inmueble=17
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html?id_inmueble=17
+---
+2014/07/13 01:35:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?id_inmueble=17
+---
+2014/07/13 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html?id_inmueble=17
+---
+2014/07/13 01:35:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html
+---
+2014/07/13 01:35:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html
+---
+2014/07/13 01:36:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?id_inmueble=17
+---
+2014/07/13 01:36:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?17
+---
+2014/07/13 01:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html?17
+---
+2014/07/13 01:36:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?3
+---
+2014/07/13 01:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html?3
+---
+2014/07/13 01:36:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view?3
+---
+2014/07/13 01:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view?3
+---
+2014/07/13 01:36:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?3
+---
+2014/07/13 01:36:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/
+---
+2014/07/13 01:36:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/7.html
+---
+2014/07/13 01:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/7.html
+---
+2014/07/13 01:36:45 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:8)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes/
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (8)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:36:51 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:8)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes/
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (8)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:37:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/
+---
+2014/07/13 01:37:45 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:8)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes/
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (8)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('&id_inmueble=17')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('&id_inmueble=17')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/&id_in...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/&id_inmueble=17
+---
+2014/07/13 01:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/&id_inmueble=17
+---
+2014/07/13 01:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes.html&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes.html&i...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes.html&id_inmueble=17
+---
+2014/07/13 01:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes.html&id_inmueble=17
+---
+2014/07/13 01:38:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes.htm&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes.htm&id...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes.htm&id_inmueble=17
+---
+2014/07/13 01:38:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes.htm&id_inmueble=17
+---
+2014/07/13 01:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:38:25 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:8)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (8)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:38:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:38:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes.html?id_inmueble=17
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:38:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/imagenes.html?id_inmueble=17
+---
+2014/07/13 01:39:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/view')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/imagenes/view.html?id_inmueble=17
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/view.html?id_inmueble=17
+---
+2014/07/13 01:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes.html?id_inmueble=17
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/imagenes.html?id_inmueble=17
+---
+2014/07/13 01:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/id_inm...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/id_inmueble/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/id_inmueble/17.html
+---
+2014/07/13 01:40:08 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:8)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (8)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/13 01:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/id_inm...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/id_inmueble/17
+---
+2014/07/13 01:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/id_inmueble/17
+---
+2014/07/13 01:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/id_inm...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/id_inmueble/17.htm
+---
+2014/07/13 01:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/id_inmueble/17.htm
+---
+2014/07/13 01:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/13 01:41:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login.html
+---
+2014/07/13 01:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes
+---
+2014/07/13 01:44:37 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php:15)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(291): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 E:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 E:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(20): ImagenesController->widget()
+#7 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#11 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#12 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#18 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#21 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#22 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_view.php (15)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (20)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17
+---
+2014/07/13 01:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17
+---
+2014/07/13 01:46:48 [error] [php] Undefined variable: model (E:\xampp\htdocs\PHP\protected\views\imagenes\index.php:19)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#2 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#3 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#6 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#9 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#13 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes?id_inmueble=17
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (19)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:47:13 [error] [php] Undefined variable: model (E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php:22)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\PHP\protected\views\imagenes\index.php(19): ImagenesController->renderPartial()
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): ImagenesController->renderInternal()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#6 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#7 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#8 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#10 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#13 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#16 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#17 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes?id_inmueble=17
+in E:\xampp\htdocs\PHP\protected\views\imagenes\_form.php (22)
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (19)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+2014/07/13 01:47:39 [error] [php] Undefined variable: model (E:\xampp\htdocs\PHP\protected\views\imagenes\index.php:19)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#2 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#3 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#6 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#9 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#13 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes?id_inmueble=17
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (19)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:47:59 [error] [php] Undefined variable: model (E:\xampp\htdocs\PHP\protected\views\imagenes\index.php:19)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): ImagenesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\web\CController.php(782): ImagenesController->renderPartial()
+#2 E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php(141): ImagenesController->render()
+#3 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ImagenesController->actionIndex()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): ImagenesController->runAction()
+#6 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): ImagenesController->filterAccessControl()
+#9 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\xampp\htdocs\yii\framework\web\CController.php(265): ImagenesController->runActionWithFilters()
+#12 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ImagenesController->run()
+#13 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/imagenes?id_inmueble=17
+in E:\xampp\htdocs\PHP\protected\views\imagenes\index.php (19)
+in E:\xampp\htdocs\PHP\protected\controllers\ImagenesController.php (141)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17
+---
+2014/07/13 01:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17
+---
+2014/07/13 01:48:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:48:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:48:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login.html
+---
+2014/07/13 01:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:50:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes.html?%26id_inmueble=17
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:50:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/imagenes.html?%26id_inmueble=17
+---
+2014/07/13 01:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "&id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('&id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('&id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/&id_in...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/%26id_inmueble/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/%26id_inmueble/17.html
+---
+2014/07/13 01:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "&id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('&id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('&id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/&id_in...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/&id_inmueble/17.html
+---
+2014/07/13 01:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/&id_inmueble/17.html
+---
+2014/07/13 01:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble/17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble/17.html
+---
+2014/07/13 01:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble/17.html
+---
+2014/07/13 01:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17
+---
+2014/07/13 01:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/?id_inmueble=17
+---
+2014/07/13 01:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/?id_inmueble=17
+---
+2014/07/13 01:50:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/id_inm...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/id_inmueble/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/id_inmueble/17.html
+---
+2014/07/13 01:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes&id_inm...')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes&i...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes&id_inmueble=17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/imagenes&id_inmueble=17.html
+---
+2014/07/13 01:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17.html
+---
+2014/07/13 01:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17.html
+---
+2014/07/13 01:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble/17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble/17.html
+---
+2014/07/13 01:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble/17.html
+---
+2014/07/13 01:52:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble/17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble/17
+---
+2014/07/13 01:52:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble/17
+---
+2014/07/13 01:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble/17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble/17.html
+---
+2014/07/13 01:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "&id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('&id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('&id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/&id_in...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/&id_inmueble/17.html
+---
+2014/07/13 01:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "&id_inmueble".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('&id_inmueble')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('&id_inmueble')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes/&id_in...')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/imagenes/%26id_inmueble/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:52:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17.html
+---
+2014/07/13 01:52:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17.html
+---
+2014/07/13 01:52:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:52:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:52:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "imagenes&id_inmueble=17".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('imagenes&id_inm...')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes&id_inmueble=17
+---
+2014/07/13 01:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes?id_inmueble=17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/imagenes?id_inmueble=17.html
+---
+2014/07/13 01:52:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/13 01:52:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "imagenes".' in E:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/imagenes?id_inmueble=17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:53:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/13 01:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:53:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/13 01:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:53:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/13 01:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:54:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login
+---
+2014/07/13 01:54:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes/create.html?id_inmueble=17
+---
+2014/07/13 01:54:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:54:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:54:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/13 01:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:55:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login
+---
+2014/07/13 01:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/13 01:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create
+---
+2014/07/13 01:55:13 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (75)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:55:13 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (75)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create
+---
+2014/07/13 01:55:26 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (75)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:55:26 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (75)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/13 01:55:26 [error] [php] Undefined index: id_inmueble (E:\xampp\htdocs\PHP\protected\views\inmuebles\_formImagenes.php:32)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#1 E:\xampp\htdocs\PHP\protected\views\inmuebles\imagenes.php(19): InmueblesController->renderPartial()
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): InmueblesController->renderInternal()
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#5 E:\xampp\htdocs\yii\framework\web\CController.php(782): InmueblesController->renderPartial()
+#6 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(178): InmueblesController->render()
+#7 unknown(0): InmueblesController->actionImagenes()
+#8 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#12 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#15 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\xampp\htdocs\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#18 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#19 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/imagenes/18.html
+in E:\xampp\htdocs\PHP\protected\views\inmuebles\_formImagenes.php (32)
+in E:\xampp\htdocs\PHP\protected\views\inmuebles\imagenes.php (19)
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (178)
+2014/07/14 02:05:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:05:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/delet...')
+#10 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/PHP/inmuebles/delete/18.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/delete/18.html
+---
+2014/07/14 02:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/eventos/create/18.html
+---
+2014/07/14 02:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/update/18.html
+---
+2014/07/14 02:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:05:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=18.html
+---
+2014/07/14 02:05:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/14 02:05:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/site/login
+---
+2014/07/14 02:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/update/17.html
+---
+2014/07/14 02:06:58 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:06:58 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:06:58 [warning] [application] Failed to set unsafe attribute "imagen_portada" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/update/17.html
+---
+2014/07/14 02:07:15 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:07:15 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:07:15 [warning] [application] Failed to set unsafe attribute "imagen_portada" of "Inmuebles".
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (116)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:07:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:36:48 [error] [php] Undefined variable: form (E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php:30)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\web\CController.php(782): InmueblesController->renderPartial()
+#2 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): InmueblesController->render()
+#3 unknown(0): InmueblesController->actionView()
+#4 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#8 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#14 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#15 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/17.html
+in E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php (30)
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (56)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:37:24 [error] [php] Undefined variable: form (E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php:30)
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CController.php(869): InmueblesController->renderFile()
+#1 E:\xampp\htdocs\yii\framework\web\CController.php(782): InmueblesController->renderPartial()
+#2 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): InmueblesController->render()
+#3 unknown(0): InmueblesController->actionView()
+#4 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#8 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\xampp\htdocs\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#14 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#15 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/17.html
+in E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php (30)
+in E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php (56)
+in E:\xampp\htdocs\PHP\index.php (13)
+2014/07/14 02:38:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:39:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:41:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:45:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create
+---
+2014/07/14 02:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create
+---
+2014/07/14 02:56:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/create
+---
+2014/07/14 02:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---
+2014/07/14 02:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/imagenes?id_inmueble=17.html
+---
+2014/07/14 02:58:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:58:54 [error] [exception.CException] exception 'CException' with message 'InmueblesController has an extra endWidget() call in its view.' in E:\xampp\htdocs\yii\framework\web\CBaseController.php:210
+Stack trace:
+#0 E:\xampp\htdocs\PHP\protected\views\inmuebles\view.php(191): CBaseController->endWidget()
+#1 E:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#3 E:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#5 E:\xampp\htdocs\PHP\protected\controllers\InmueblesController.php(56): CController->render('view', Array)
+#6 [internal function]: InmueblesController->actionView('17')
+#7 E:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#8 E:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#9 E:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/view')
+#19 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/PHP/inmuebles/17.html
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/14 02:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/calendario.css".' in E:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/calendario....')
+#1 E:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/css/calendario.css
+HTTP_REFERER=http://localhost:90/PHP/inmuebles/17.html
+---

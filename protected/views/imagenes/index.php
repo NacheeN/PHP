@@ -12,9 +12,9 @@ $this->menu=array(
 );
 ?>
 
-<h1>Imagenes</h1>
+<div class="page-header">
+  <h1 id="forms">Imagenes</h1>
+</div>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<?php $this->renderPartial('_view'); ?>
+
