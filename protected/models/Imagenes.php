@@ -31,7 +31,6 @@ class Imagenes extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_inmueble, descripcion', 'required'),
-			array('id_inmueble', 'numerical', 'integerOnly'=>true),
 			array('descripcion', 'length', 'max'=>255),
 			array('ruta', 'safe'),
 			// The following rule is used by search().

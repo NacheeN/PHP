@@ -3,8 +3,8 @@
 /* @var $model Eventos */
 
 $this->breadcrumbs=array(
-	'Eventoses'=>array('index'),
-	$model->id,
+	'Eventos'=>array('index'),
+	$model->titulo,
 );
 
 $this->menu=array(

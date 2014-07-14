@@ -5,76 +5,135 @@
 ?>
 
 <div class="form-horizontal borde" role="form">
+<!--
+<?php #$form = $this->beginWidget(
+	#'booster.widgets.TbActiveForm',
+	#array(
+	#	'id' => 'eventos-form',
+	#	'htmlOptions' => array('class' => 'well'), // for inset effect
+	#	'enableAjaxValidation'=>false,
+	#)
+#); ?>
+-->	
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'eventos-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
+	'enableAjaxValidation'=>false,
+)); ?>
 
-<?php $form = $this->beginWidget(
-	'booster.widgets.TbActiveForm',
-	array(
-		'id' => 'eventos-form',
-		'htmlOptions' => array('class' => 'well'), // for inset effect
-		'enableAjaxValidation'=>false,
-	)
-); ?>
-	
 	<p class="note">Requerido <span class="required">*</span></p>
 
-
-	<div class="text-danger">
-		<?php echo $form->errorSummary($model); ?>
-	</div>
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="col-lg-12">
-		<?php echo $form->textFieldGroup($model,'titulo',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'titulo'); ?>
-	</div>
-
-
-
-	<div class="col-lg-12">
-		<?php echo $form->datePickerGroup(
-			$model,
-			'fecha_hora_desde',
-			array(
-				'widgetOptions' => array(
-					'options' => array(
-						'language' => 'es',
-					),
-				),
-				'wrapperHtmlOptions' => array(
-					'class' => 'col-sm-5',
-				),
-				'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
-			)
-		); ?>
-		<?php echo $form->error($model,'fecha_hora_desde'); ?>
-	</div>
-
-
-	<div class="col-lg-12">
-		<?php echo $form->datePickerGroup(
-			$model,
-			'fecha_hora_hasta',
-			array(
-				'widgetOptions' => array(
-					'options' => array(
-						'language' => 'es',
-					),
-				),
-				'wrapperHtmlOptions' => array(
-					'class' => 'col-sm-5',
-				),
-				'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
-			)
-		); ?>
-		<?php echo $form->error($model,'fecha_hora_hasta'); ?>
-	</div>
-
-		</div>
-		<div class="col-lg-6">
-
+	<div class="form-group">
+		<div class="text-danger">
+			<?php echo $form->errorSummary($model); ?>
 		</div>
 	</div>
 	
+	<div class="row">
+		<div class="col-lg-6">
+
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->label($model,'titulo'); ?>
+				</div>
+				<div class="col-lg-10">
+					<?php echo $form->textField($model,'titulo',array('size'=>50,'maxlength'=>50)); ?>
+					<?php echo $form->error($model,'titulo'); ?>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->label($model,'fecha_hora_desde'); ?>
+				</div>
+				<div class="col-lg-10">
+			        <?php Yii::import('application.extensions.jui.EJuiDateTimePicker');
+					$this->widget(
+						    'EJuiDateTimePicker',
+						    array(
+						        'model'     => $model,
+						        'attribute' => 'fecha_hora_desde',
+						        //'language'=> 'es',//default Yii::app()->language
+						        'mode'    => 'datetime',//'datetime' or 'time' ('datetime' default)
+						       	
+				            	'options'=>array(
+				                        'timeFormat'=>'hh:mm:ss',
+				                        'dateFormat'=>'yy-mm-dd'
+				                    ),
+						    ));
+					?>
+					<!--
+					<?php #echo $form->datePickerGroup(
+						#$model,
+						#'fecha_hora_desde',
+						#array(
+						#	'widgetOptions' => array(
+						#		'options' => array(
+						#			'language' => 'es',
+						#		),
+						#	),
+						#	'wrapperHtmlOptions' => array(
+						#		'class' => 'col-sm-5',
+						#	),
+						#	'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
+						#)
+					#); ?>
+				-->
+					<?php echo $form->error($model,'fecha_hora_desde'); ?>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->label($model,'fecha_hora_hasta'); ?>
+				</div>
+				<div class="col-lg-10">
+			        <?php Yii::import('application.extensions.jui.EJuiDateTimePicker');
+					$this->widget(
+						    'EJuiDateTimePicker',
+						    array(
+						        'model'     => $model,
+						        'attribute' => 'fecha_hora_hasta',
+						        //'language'=> 'es',//default Yii::app()->language
+						        'mode'    => 'datetime',//'datetime' or 'time' ('datetime' default)
+						       	
+				            	'options'=>array(
+				                        'timeFormat'=>'hh:mm:ss',
+				                        'dateFormat'=>'yy-mm-dd'
+				                    ),
+						    ));
+					?>
+					<!--
+					<?php #echo $form->datePickerGroup(
+						#$model,
+						#'fecha_hora_hasta',
+						#array(
+							#'widgetOptions' => array(
+								#'options' => array(
+									#'language' => 'es',
+								#),
+							#),
+							#'wrapperHtmlOptions' => array(
+							#	'class' => 'col-sm-5',
+							#),
+							#'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
+						#)
+					#); ?>
+					|-->
+					<?php echo $form->error($model,'fecha_hora_hasta'); ?>
+				</div>
+			</div>	
+		</div>
+
+		<div class="col-lg-6">
+			
+		</div>
+
+	</div>
+
 
 	<div class="form-group">
 		<div class="col-lg-12">
