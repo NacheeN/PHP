@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Solicitudes'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
@@ -14,7 +14,10 @@ $this->menu=array(
 ?>
 
 <div class="page-header">
-  <h1 id="forms">Create Solicitudes</h1>
+  <h1 id="forms">Solicitudes</h1> <!--	NACHEEN-->
 </div>
+
+
+
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

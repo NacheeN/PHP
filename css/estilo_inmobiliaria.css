@@ -2,3 +2,21 @@ body{
 	padding-top: 60px;
 }
 
+
+.table-condensed{
+	background-color: white;
+}
+
+.panel-title a{
+	text-decoration: none;
+}
+
+.panel-title a:hover{
+	color: #0991E1;
+	text-decoration: none;
+}
+
+
+.carousel-caption{
+	background-color: rgba(6,32,100,0.5);
+}

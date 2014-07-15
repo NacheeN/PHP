@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.css" media="screen">
     <link rel="stylesheet" href="http://bootswatch.com/assets/css/bootswatch.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/estilo_inmobiliaria.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/calendario.css" />
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,8 +21,8 @@
 
 	<body style="padding-top: 10px;">
 		<div class="container" id="page">
-
-		<div class="bs-component">
+          <?php #if(Yii::app()->user->isGuest){ ?>
+		        <div class="bs-component">
               <div class="navbar navbar-default">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -31,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>">Inmobiliaria</a>
+                  <a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>">Inmobiliaria Control</a>
                 </div>
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                   <ul class="nav navbar-nav">
@@ -46,7 +45,13 @@
                      <?php 
                     	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3))
                       {
-                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/index">Calendario</a></li>';
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/index">Calendario</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/solicitudes/index">Solicitudes</a></li>';
+                      }
+                        ?>
+                      <?php 
+                      if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 2))
+                      {
+                        echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/create">Clientes</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/solicitudes/index">Solicitudes</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/create">Agendar Visita</a></li>';
                       }
                         ?>
                       
@@ -63,6 +68,9 @@
                 </div>
               </div>
             </div>
+          <?php #} 
+          #else{}
+          ?>
 
 		<!-- CONTENIDO PAGINA -->
 		
@@ -75,10 +83,10 @@
 				<?php endif?>
 			</div><!--/ breadcrumbs -->
 
-			<?php echo $content; ?>
+      <?php echo $content; ?>
 
 		</div><!-- /contenido -->
-		
+    
 		<!-- FOOTER -->
 		<footer>
 

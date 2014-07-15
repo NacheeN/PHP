@@ -37,8 +37,7 @@
         <div class="caption">
         	<h3><?php echo CHtml::encode($data->barrio->ciudad->nombre); ?> - <?php echo CHtml::encode($data->barrio->nombre); ?></h3>
             <p><?php echo CHtml::encode($data->tipo); ?> / U$S <?php echo CHtml::encode($data->valor); ?></p>       
-            <p><?php echo CHtml::link('Vista', array('inmuebles/view', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?> <?php echo CHtml::link('Modificar', array('inmuebles/update', 'id'=>$data->id), array('class'=>'btn btn-default')); ?>
-            	<?php echo CHtml::link('Agendar Visita', array('eventos/create', 'id'=>$data->id), array('class'=>'btn btn-default')); ?>
+            <p><?php echo CHtml::link('Vista', array('inmuebles/view', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?> <?php echo CHtml::link('Modificar', array('inmuebles/update', 'id'=>$data->id), array('class'=>'btn btn-default')); ?><?php echo CHtml::link('Agendar Visita', array('eventos/nuevo', 'id'=>$data->id), array('class'=>'btn btn-default')); ?>
             </p>
         </div>
     </div>

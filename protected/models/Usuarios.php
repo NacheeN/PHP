@@ -19,7 +19,7 @@
  * @property Eventos[] $eventoses1
  * @property Inmuebles[] $inmuebles
  * @property Operacion[] $operacions
- * @property Solicitudes[] $solicitudes
+ * @property Roles $idRol
  */
 class Usuarios extends CActiveRecord
 {
@@ -64,7 +64,6 @@ class Usuarios extends CActiveRecord
 			'eventoses1' => array(self::HAS_MANY, 'Eventos', 'id_cliente'),
 			'inmuebles' => array(self::HAS_MANY, 'Inmuebles', 'id_usuario'),
 			'operacions' => array(self::HAS_MANY, 'Operacion', 'id_usuario'),
-			'solicitudes' => array(self::HAS_MANY, 'Solicitudes', 'id_usuario'),
 			'rol' => array(self::BELONGS_TO, 'Roles', 'id_rol'),
 		);
 	}
@@ -135,8 +134,16 @@ class Usuarios extends CActiveRecord
 	* @return array of valid users for this project, indexed by user IDs
 	*/
 	public function getRoles()
-	{		
-		$rolesArray = CHtml::listData(Roles::model()->findAll(), 'id','nombre');
+	{	
+		if (Yii::app()->user->id == 1) 
+		{
+			$rolesArray = CHtml::listData(Roles::model()->findAll(), 'id','nombre');
+		}
+		else
+		{	
+			$rolesArray = CHtml::listData(Roles::model()->findAll('id>3'), 'id','nombre');
+		}	
+
 		return $rolesArray;
 	}
 }
