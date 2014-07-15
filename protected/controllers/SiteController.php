@@ -51,8 +51,29 @@ class SiteController extends Controller
 		//$inm=Inmuebles::model()->findAll('destacado=1');
 		//$lista=$inm->findAllByAttributes(array('destacado'=>1));
 
+		$model = new Inmuebles('search');
+		$model->unsetAttributes(); // clear any default values
+		if (isset($_GET['MyModel']))
+		$model->attributes = $_GET['MyModel'];
 
-		$this->render('index',array('dataProvider'=>$dataProvider, 'lista'=>$inm));
+
+
+		$busqueda=new BusquedaForm;
+
+		$departamentos=Departamento::model()->findAll();
+		$ciudades=Ciudad::model()->findAll();
+		$barrios=Barrio::model()->findAll();
+
+		
+
+		$this->render('index',array('dataProvider'=>$dataProvider,'model'=>$model, 'busqueda' => $busqueda, 'departamentos'=>$departamentos,'barrios'=>$barrios,'lista'=>$inm));
+
+
+
+
+
+
+		//$this->render('index',array('dataProvider'=>$dataProvider, 'lista'=>$inm));
 
 	}
 
@@ -76,22 +97,46 @@ class SiteController extends Controller
 	 */
 	public function actionContact()
 	{
+		
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
+				 Yii::import('application.extensions.phpmailer.JPhpMailer');
+				
+				$mail = new JPhpMailer;
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
+				
+				$mail->IsSMTP();
+				$mail->SMTPDebug = 1;
+				$mail->Host = 'smtp.gmail.com';
+				$mail->SMTPAuth = true;
+				$mail->SMTPSecure = "ssl"; 
+				$mail->Username = "php.inmobiliaria.2014@gmail.com";
+				$mail->Port = '465'; 
+				$mail->Password = "grupophp";
+				$mail->SetFrom($model->email,$model->name);
+				$mail->AddAddress("php.inmobiliaria.2014@gmail.com");
+				$mail->Subject = $model->subject;
+				$mail->Body = $model->body;
+				//$mail->MsgHTML('JUST A TEST!'); 
+				
+
+
+				if($mail->Send()){
+
+					Yii::app()->user->setFlash('contact','Gracias por contactarse. Le responderemos tan pronto sea posible.');
+					$this->refresh();
+				} 
+
+
+
+				
+
+
+				
 			}
 		}
 		$this->render('contact',array('model'=>$model));
@@ -201,6 +246,43 @@ class SiteController extends Controller
 	                   array('value'=>$value),CHtml::encode($name),true);
 	    }
 	}
+
+
+
+	public function actionCiudades()
+    {
+       	$id_dep = $_POST['BusquedaForm']['id_departamento'];
+		$lista_ciudades = Ciudad::model()->findAll('id_departamento=:id_dep',array(':id_dep'=>$id_dep));
+        $lista_ciudades = CHtml::listData($lista_ciudades,'id','nombre');
+        
+        echo CHtml::tag('option', array('value' => ''), 'Ciudad', true);
+        
+        foreach ($lista_ciudades as $valor => $nombre){
+            echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($nombre), true );
+            
+        }
+            
+    }
+        
+        
+    public function actionBarrios()
+    {
+        $id_ciu = $_POST['BusquedaForm']['id_ciudad'];
+       	$lista_barrios = Barrio::model()->findAll('id_ciudad = :id_ciu',array(':id_ciu'=>$id_ciu));
+        $lista_barrios = CHtml::listData($lista_barrios,'id','nombre');
+        
+        echo CHtml::tag('option', array('value' => ''), 'Barrio', true);
+        
+        foreach ($lista_barrios as $valor => $nombre){
+            echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($nombre), true );
+            
+        }
+            
+    }
+
+
+
+
 	
 	public function actionLlamar()
     {

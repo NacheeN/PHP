@@ -23744,3 +23744,57 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/PHP/
 ---
+2014/07/15 23:06:55 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'destacado' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `inmuebles` `t` WHERE destacado=1.
+in C:\wamp\www\PHP\protected\views\site\index.php (185)
+in C:\wamp\www\PHP\protected\controllers\SiteController.php (69)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/15 23:06:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'destacado' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `inmuebles` `t` WHERE destacado=1' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\PHP\protected\views\site\index.php(185): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\PHP...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\PHP...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\PHP...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\PHP\protected\controllers\SiteController.php(69): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PHP/
+---
+2014/07/15 23:11:58 [error] [exception.CException] exception 'CException' with message 'Property "Solicitudes.estado" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('estado', 'Pendiente')
+#1 C:\wamp\www\PHP\protected\controllers\SolicitudesController.php(69): CActiveRecord->__set('estado', 'Pendiente')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SolicitudesController->actionCreate()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudes/cre...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/solicitudes/create
+HTTP_REFERER=http://localhost:8080/PHP/site/contact
+---

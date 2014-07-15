@@ -46,6 +46,13 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
+		'mailer' => array(
+	      'class' => 'application.extensions.mailer.EMailer',
+	      'pathViews' => 'application.views.email',
+	      'pathLayouts' => 'application.views.email.layouts'
+	   ),
+
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,

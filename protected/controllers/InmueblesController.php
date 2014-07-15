@@ -19,6 +19,24 @@ class InmueblesController extends Controller
 		);
 	}
 
+	public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),
+			// page action renders "static" pages stored under 'protected/views/site/pages'
+			// They can be accessed via: index.php?r=site/page&view=FileName
+			'page'=>array(
+				'class'=>'CViewAction',
+			),
+		);
+	}
+
+
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -253,6 +271,340 @@ class InmueblesController extends Controller
 		}
 
 	}
+
+
+	//**************************************************
+	public function actionBusqueda()
+	{
+			
+			$correo=new ContactForm;
+
+
+			$criteria = new CDbCriteria();
+			$model=new BusquedaForm;
+
+
+    		$cuerpo_mensaje=null;
+
+			$conditions=array();
+			$id=0;
+
+
+			if(isset($_POST['ContactForm']))
+					{		
+
+				Yii::import('application.extensions.phpmailer.JPhpMailer');
+				
+				$mail = new JPhpMailer;
+
+
+				$correo->email=$_POST['ContactForm']['email'];
+				$correo->name=$_POST['ContactForm']['name'];
+				$correo->subject=$_POST['ContactForm']['subject'];
+				$correo->body=$_POST['ContactForm']['body'];
+				
+				$mail->IsSMTP();
+				$mail->SMTPDebug = 1;
+				$mail->Host = 'smtp.gmail.com';
+				$mail->SMTPAuth = true;
+				$mail->SMTPSecure = "ssl"; 
+				$mail->Username = "php.inmobiliaria.2014@gmail.com";
+				$mail->Port = '465'; 
+				$mail->Password = "grupophp";
+				$mail->SetFrom($correo->email,$correo->name);
+				$mail->AddAddress("php.inmobiliaria.2014@gmail.com");
+				$mail->Subject = $correo->subject;
+				$mail->Body = $correo->body;
+				//$mail->MsgHTML('JUST A TEST!'); 
+				
+
+
+				if($mail->Send()){
+
+					//Yii::app()->user->setFlash('contact','Gracias por contactarse. Le responderemos tan pronto sea posible.');
+					$this->refresh();
+					$url = $this->createAbsoluteUrl('/site/index');
+					$this->redirect($url, true);
+				} 
+
+
+
+		}		
+
+
+
+
+
+
+
+			if(isset($_POST['BusquedaForm']))
+
+			{	
+				//$model->attributes=$_POST['BusquedaForm'];
+
+					$conditions=array();
+
+					if(isset($_POST['BusquedaForm']['id_departamento']))
+					{
+
+						$model->id_departamento=$_POST['BusquedaForm']['id_departamento'];
+
+						if(mb_strlen($model->id_departamento)>0){
+							
+							$texto_msj=$cuerpo_mensaje;
+							$criterio = new CDbCriteria();
+							$criterio->select = 'nombre';
+							$criterio->condition=('id = '.$model->id_departamento);
+							
+							
+							$resultados = Departamento::model()->findAll($criterio);
+
+							 foreach ($resultados as $resultado){
+								$texto_dep=$resultado->nombre;
+								 }
+
+							 $cuerpo_mensaje=$texto_msj."Departamento: ".$texto_dep."\n";
+						}
+
+
+						if(isset($_POST['BusquedaForm']['id_ciudad'])){
+
+							$model->id_ciudad=$_POST['BusquedaForm']['id_ciudad'];
+
+							if(mb_strlen($model->id_departamento)>0){	
+							
+									$texto_msj=$cuerpo_mensaje;
+									$criterio = new CDbCriteria();
+									$criterio->select = 'nombre';
+									$criterio->condition=('id = '.$model->id_ciudad);
+									
+									$resultados = Ciudad::model()->findAll($criterio);
+
+								 	foreach ($resultados as $resultado){
+										$texto_ciu=$resultado->nombre;
+						 			}
+
+							 		$cuerpo_mensaje=$texto_msj."Ciudad: ".$texto_ciu."\n";
+								}
+
+
+							if(isset($_POST['BusquedaForm']['id_barrio'])){
+
+								$model->id_barrio=$_POST['BusquedaForm']['id_barrio'];
+
+								if(mb_strlen($model->id_barrio)>0){
+
+									$texto_msj=$cuerpo_mensaje;
+
+									$criterio = new CDbCriteria();
+									$criterio->select = 'nombre';
+									$criterio->condition=('id = '.$model->id_barrio);
+									
+									$resultados = Barrio::model()->findAll($criterio);
+
+									 foreach ($resultados as $resultado){
+	        							$texto_barrio=$resultado->nombre;
+   								 	}
+
+									$cuerpo_mensaje=$texto_msj."Barrio: ".$texto_barrio."\n";
+
+									$conditions[$id]=('id_barrio = '.$model->id_barrio);
+									$id=$id+1;
+
+
+								}
+								
+							}
+						}
+
+					}
+
+					if(isset($_POST['BusquedaForm']['tipo'])){
+
+						$model->tipo=$_POST['BusquedaForm']['tipo'];
+
+						if(mb_strlen($model->tipo)>0){
+						
+							$tipos=array("Tipo","Casa","Apartamento","Local","Terreno","Oficina");
+
+							$texto_msj=$cuerpo_mensaje;
+
+							$cuerpo_mensaje=$texto_msj."Tipo Inmueble: ".$tipos[$model->tipo]."\n";
+
+							$conditions[$id]=('tipo = '.$model->tipo);
+							$id=$id+1;
+
+
+						}
+					}
+
+					if(isset($_POST['BusquedaForm']['operacion'])){
+
+						$model->operacion=$_POST['BusquedaForm']['operacion'];
+
+						if(mb_strlen($model->operacion)>0){
+
+							$operaciones=array("Tipo","Venta","Alquiler","AlquilerTemporada","Permuta");
+
+							$texto_msj=$cuerpo_mensaje;
+
+							$cuerpo_mensaje=$texto_msj."Tipo Operacion: ".$operaciones[$model->operacion]."\n";
+
+							$conditions[$id]=('operacion = '.$model->operacion);
+							$id=$id+1;
+						}
+					}
+
+
+
+
+					if(isset($_POST['BusquedaForm']['precio_desde'])){
+
+						$model->precio_desde=$_POST['BusquedaForm']['precio_desde'];
+
+						$precio=$model->precio_desde;
+
+						if(mb_strlen($precio)>0){
+
+
+							$texto_msj=$cuerpo_mensaje;
+
+							$cuerpo_mensaje=$texto_msj."Precio desde: ".$model->precio_desde.' $USD'."\n";
+
+							$conditions[$id]=('valor >= '.$precio);	
+
+							//$conditions[$id]=('valor > '.$model->precio_desde);
+							$id=$id+1;
+						}
+					}
+
+					if(isset($_POST['BusquedaForm']['precio_hasta'])){
+
+						$model->precio_hasta=$_POST['BusquedaForm']['precio_hasta'];
+						
+						$precio_D=$model->precio_hasta;
+
+
+						if(mb_strlen($precio_D)>0){
+
+
+							$texto_msj=$cuerpo_mensaje;
+
+							$cuerpo_mensaje=$texto_msj."Precio hasta: ".$model->precio_hasta.' $USD'."\n";
+
+							$conditions[$id]=('valor <= '.$precio_D);	
+							$id=$id+1;
+						}
+					}
+
+					if(isset($_POST['BusquedaForm']['texto'])){
+
+						$model->texto=$_POST['BusquedaForm']['texto'];
+
+						$texto=$model->texto;
+						if(mb_strlen($texto)>0){
+
+							$texto_msj=$cuerpo_mensaje;
+
+							$cuerpo_mensaje=$texto_msj."Opcion busqueda: ".$model->texto."\n";
+							$conditions[$id]="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('*{$texto}*' IN BOOLEAN MODE)";		
+
+						}
+
+							//$model->texto=strlen($_POST['BusquedaForm']['texto']);
+
+					//	$criteria->condition="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('{$model->texto}' IN BOOLEAN MODE)";
+						//$conditions[$id]="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('*{$texto}*' IN BOOLEAN MODE)";
+						//$conditions[0]="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('Casa' IN BOOLEAN MODE)";
+
+					}
+
+
+					//$model->id_departamento=$_POST['BusquedaForm']['id_departamento'];
+					
+					//$model->id_ciudad=$_POST['BusquedaForm']['id_ciudad'];
+
+					//$model->id_barrio=$_POST['BusquedaForm']['id_barrio'];
+
+					//$model->tipo=$_POST['BusquedaForm']['tipo'];	
+	
+					//$model->precio_desde=$_POST['BusquedaForm']['precio_desde'];	
+
+					//$model->precio_hasta=$_POST['BusquedaForm']['precio_hasta'];
+
+					//$model->texto=$_POST['BusquedaForm']['texto'];
+				
+
+					
+
+
+					/*$conditions=array();
+					$conditions[0]="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('{$model->texto}' IN BOOLEAN MODE)";
+
+					$conditions[1]=('valor > '.$model->precio_desde);
+					$conditions[2]=('valor < '.$model->precio_hasta);*/
+
+					$criteria->condition = implode(' AND ', $conditions);
+
+
+
+
+
+					//if (($_GET['search_key']))
+
+					//$q = $_GET['search_key'];
+					//$criteria->compare('nombre', $q, true,'OR');
+					//$criteria->compare('tipo', $q, true,'OR');
+			      	
+			      	//$criteria->condition = "MATCH (nombre,direccion,titulo,descripcion) AGAINST (   IN BOOLEAN MODE) ";
+
+			      	//$criteria->condition ="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('*{$_GET['search_key']}*'  IN BOOLEAN MODE)";
+
+					//$criteria->condition ="MATCH (nombre,direccion,titulo,descripcion) AGAINST (   IN BOOLEAN MODE)";
+				   
+				   $dataProvider=new CActiveDataProvider("Inmuebles", array('criteria'=>$criteria));
+
+					$itemCount=$dataProvider->itemCount;
+
+
+				   if	($itemCount>0){
+
+				   	$this->render('busqueda',array('dataProvider'=>$dataProvider));
+
+
+				   //	$model=new ContactForm;
+				   	//$this->render('contact',array('model'=>$model));
+				   }
+
+				   else
+				   {
+
+				   
+				   	$correo->subject="Consulta de Inmueble";
+				   	$correo->body="Busco un inmueble con estas caracteristicas:\n".$cuerpo_mensaje."\nSaludos ";
+				   	$this->render('contact',array('model'=>$correo));
+
+				   	//$this->render('busqueda',array('dataProvider'=>$dataProvider));
+
+				   }
+
+				  	 /*$criteria->condition ="MATCH (nombre,direccion,titulo,descripcion) AGAINST ('*{$_POST['search_key']}*'  IN BOOLEAN MODE)";
+
+				    $dataProvider=new CActiveDataProvider("Inmuebles", array('criteria'=>$criteria));
+
+				    $this->render('busqueda',array('dataProvider'=>$dataProvider));*/
+
+				    // $this->render('busqueda',array('dataProvider'=>$dataProvider));
+				
+		 	}
+
+		 	else{
+
+			 	
+			 	$dataProvider=new CActiveDataProvider("Inmuebles", array('criteria'=>$criteria));
+			 	}
+}
+	//***********************************************
 
 
 }
