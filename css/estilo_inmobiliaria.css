@@ -20,3 +20,15 @@ body{
 .carousel-caption{
 	background-color: rgba(6,32,100,0.5);
 }
+
+select{
+	color:black;
+}
+
+.desta{
+	/*background-color: #F4FF2D;*/
+	color:#F4FF2D;
+}
+
+.carousel-inner { text-align: center; }
+.carousel .item > img { display: inline-block; }

@@ -32,7 +32,7 @@ class InmueblesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes','delete','activa'),
+				'actions'=>array('create','update','imagenes','delete','activa','destacado'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -235,19 +235,19 @@ class InmueblesController extends Controller
 	public function actionActiva($id,$activa)
 	{
 		
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-		/*
-		if(isset($_GET['id'])){
-			$id=$_GET['id'];
-			$model=$this->loadModel($id);
-		}
-			
-		if(isset($_GET['activa']))
-			$activa=$_GET['activa'];
-		*/
 		$model=$this->loadModel($id);
 		$model->activo=$activa;
+		if($model->save()){
+			$this->redirect(array('site/index'));
+		}
+
+	}
+
+	public function actionDestacado($id,$des)
+	{
+		
+		$model=$this->loadModel($id);
+		$model->destacado=$des;
 		if($model->save()){
 			$this->redirect(array('site/index'));
 		}

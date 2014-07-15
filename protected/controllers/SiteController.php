@@ -36,11 +36,23 @@ class SiteController extends Controller
 		        //'with'=>array('author'),
 		    ),
 		    'pagination'=>array(
-		        'pageSize'=>5,
+		        'pageSize'=>6,
 		    ),
 		));
 
-		$this->render('index',array('dataProvider'=>$dataProvider));
+
+
+		$inm=new CActiveDataProvider('Inmuebles', array(
+		    'criteria'=>array(
+		        'condition'=>'destacado=1',
+
+		    ),		    
+		));
+		//$inm=Inmuebles::model()->findAll('destacado=1');
+		//$lista=$inm->findAllByAttributes(array('destacado'=>1));
+
+
+		$this->render('index',array('dataProvider'=>$dataProvider, 'lista'=>$inm));
 
 	}
 

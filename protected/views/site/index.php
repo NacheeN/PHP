@@ -14,34 +14,51 @@ $this->pageTitle=Yii::app()->name;
 <?php 
 
 if ( Yii::app()->user->isGuest ) { 
-
-
+//$lista =Inmuebles::model()->findAll('destacado=1');
+/*
   $this->widget(
     'booster.widgets.TbCarousel',
     array(
         'slide' => true,
         'displayPrevAndNext' => true,
         'items' => array(
-            array(
-                'image' => 'images/1.jpg',
-                'label' => 'First Thumbnail label',
-                'caption' => 'First Caption.'
-            ),
-            array(
-                'image' => 'images/2.jpg',
-                'label' => 'Second Thumbnail label',
-                'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-            ),
-            array(
-                'image' => 'images/3.jpg',
-                'label' => 'Third Thumbnail label',
-                'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
-            ),
-        ),
+                        foreach($lista as $value) 
+                        {
+                            array(
+                                'image' => 'echo Yii::app()->request->baseUrl."/images/inmueble/".$value->imagen_portada',
+                                'label' => 'echo $value->barrio->ciudad->nombre',
+                                'caption' => 'echo $data->decripcion',
+                            ),
+                        }
+                    ),
     )
 );
-         
-	
+*/
+?>
+
+<div id="slider" class="carousel slide" data-ride="carousel" >
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" >
+
+    <?php $this->widget('zii.widgets.CListView', array(
+    'dataProvider'=>$lista,
+    'itemView'=>'_listaDestacados',
+    )); ?>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<?php 
+    	
 echo CHtml::openTag('div', array('class' => 'row-fluid'));
 $this->widget(
     'booster.widgets.TbThumbnails',
