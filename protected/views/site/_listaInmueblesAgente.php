@@ -51,6 +51,15 @@
             		}
             	
             		?>
+                <?php 
+                    if ($data->destacado == 0 || $data->destacado == null) {
+                        echo CHtml::link('', array('inmuebles/destacado', 'id'=>$data->id , 'des'=>1), array('class'=>'btn btn-default glyphicon glyphicon glyphicon-star-empty')); 
+                    }
+                    else{
+                        echo CHtml::link('', array('inmuebles/destacado', 'id'=>$data->id , 'des'=>0), array('class'=>'btn btn-default glyphicon glyphicon-star desta'));
+                    }
+                
+                    ?>
             </p>
         </div>
     </div>

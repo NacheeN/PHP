@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.css" media="screen">
     <link rel="stylesheet" href="http://bootswatch.com/assets/css/bootswatch.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/estilo_inmobiliaria.css" />
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/inmobiliaria.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
