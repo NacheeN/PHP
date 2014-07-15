@@ -58,6 +58,7 @@ class SiteController extends Controller
 
 
 
+
 		$busqueda=new BusquedaForm;
 
 		$departamentos=Departamento::model()->findAll();
@@ -67,8 +68,6 @@ class SiteController extends Controller
 		
 
 		$this->render('index',array('dataProvider'=>$dataProvider,'model'=>$model, 'busqueda' => $busqueda, 'departamentos'=>$departamentos,'barrios'=>$barrios,'lista'=>$inm));
-
-
 
 
 
