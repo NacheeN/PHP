@@ -42,7 +42,7 @@ if ( Yii::app()->user->isGuest ) {
 
  ?>
 
-    <div class="row_buscador">
+    <div class="col-lg-2">
         
         <?php echo $form->dropDownList($busqueda,'id_departamento',
                    CHtml::listData($departamentos,'id','nombre'),
@@ -61,7 +61,7 @@ if ( Yii::app()->user->isGuest ) {
        
     </div>
 
-    <div class="row_buscador">
+    <div class="col-lg-2">
         
         <?php 
                 $lista_ciudades = array();
@@ -86,7 +86,7 @@ if ( Yii::app()->user->isGuest ) {
           
     </div>
   
-    <div class="row_buscador">
+    <div class="col-lg-2">
        
         <?php 
                 $lista_barrios = array();
@@ -101,7 +101,7 @@ if ( Yii::app()->user->isGuest ) {
         
     </div>
    
-   <div class="row_tipo">
+   <div class="col-lg-2">
           <?php
                 echo $form->dropDownList($busqueda,'tipo',
                         array('1'=>'Casa','2'=>'Apartamento','3'=>'Local','4'=>'Terreno','5'=>'Oficina'), 
@@ -111,7 +111,7 @@ if ( Yii::app()->user->isGuest ) {
 
    </div>
 
-    <div class="row_tipo">
+    <div class="col-lg-2">
           <?php
                 echo $form->dropDownList($busqueda,'operacion',
                         array('1'=>'Venta','2'=>'Alquiler','3'=>'Alquiler Temporada','4'=>'Permuta'), 
@@ -120,30 +120,23 @@ if ( Yii::app()->user->isGuest ) {
                         );  ?>
 
    </div>
-
-    <div class="row_texto">
-         <p>Precio</p>
-    </div>
-
-    <div class="row_campo_precio">
-         
-          <?php echo $form->textField($busqueda,'precio_desde',array('style'=>'width:50px')); ?>
+   <br>
+    <div class="col-lg-3">
+         <p>Precio <?php echo $form->textField($busqueda,'precio_desde',array('style'=>'width:50px')); ?></p>
     </div>
     
-    <div class="row_texto" value=>
-         <p>entre</p>
+    <div class="col-lg-3" >
+         <p>entre <?php echo $form->textField($busqueda,'precio_hasta',array('style'=>'width:50px')); ?></p>
     </div>
-    <div class="row_campo_precio">
 
-    
-     <?php echo $form->textField($busqueda,'precio_hasta',array('style'=>'width:50px')); ?>
-    </div>
-    <div class="row_campo_busqueda">
-      <?php echo $form->textField($busqueda,'texto',array('style'=>'width:150px')); ?>
+    <div class="col-lg-4">
+      <p>texto <?php echo $form->textField($busqueda,'texto',array('style'=>'width:150px')); ?> </p>
      </div>
 
-  <div class="row_boton">
+    <div class="form-group">
+
         <?php echo CHtml::submitButton('Buscar',array('class'=>'btn btn-default')); ?>
+
     </div>
 
 
