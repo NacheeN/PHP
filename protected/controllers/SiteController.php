@@ -194,17 +194,19 @@ class SiteController extends Controller
     {
         try 
         { 
+
+
             $client = new SoapClient("http://www.webservicex.net/FinanceService.asmx?WSDL",
               array('cache_wsdl' => WSDL_CACHE_NONE,'trace' => TRUE));
             $param = array(
-                            'LoanAmount' => '50000',
-                            'InterestRate' => '6',
-                            'Months' => '300'
+                            'LoanAmount' => $_GET['LoanAmount'],
+                            'InterestRate' => $_GET['InterestRate'],
+                            'Months' => $_GET['Months']
                             );
          
             $ready = $client->LoanMonthlyPayment($param) ->LoanMonthlyPaymentResult;
 
-            echo "<script type='text/javascript'>alert('US$ $ready');</script>";
+            echo "<script type='text/javascript'>alert('Valor de la cuota: US$ $ready');</script>";
 
         } catch (Exception $e) {
 

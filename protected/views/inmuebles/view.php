@@ -155,28 +155,27 @@ $this->menu=array(
         <h2>Calcule su préstamo</h2>
         <p class="intro"></p>
 
-        <form target="_blank" method="GET">                      
+        <form target="_blank" method="GET" action="/PHP/site/llamar">                      
           
           <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
           <tbody>
           <tr>
             <td class="frmText" style="color: #000000; font-weight: normal;">Valor del inmueble (US$):</td>
-            <td><input class="frmInput" type="text" size="50" name="LoanAmount" id="LoanAmount"></td>
+            <td><input class="frmInput" type="text" size="50" name="LoanAmount" id="LoanAmount" value=""></td>
           </tr>
         
           <tr>
             <td class="frmText" style="color: #000000; font-weight: normal;">Interés anual (%):</td>
-            <td><input class="frmInput" type="text" size="50" name="InterestRate"></td>
+            <td><input class="frmInput" type="text" size="50" name="InterestRate" id="InterestRate"></td>
           </tr>
         
           <tr>
             <td class="frmText" style="color: #000000; font-weight: normal;">Cantidad de cuotas mensuales:</td>
-            <td><input class="frmInput" type="text" size="50" name="Months"></td>
+            <td><input class="frmInput" type="text" size="50" name="Months" id="Months"></td>
           </tr>
           
           <tr>
-            <td></td>
-            <td align="right"> <?php echo CHtml::link('Calcular', array('site/llamar'), array('class'=>'btn btn-default')); ?></td>
+            <td align="right"> <?php echo CHtml::submitButton('Calcular', array('class'=>'btn btn-default')); ?></td>
           </tr>
           </tbody></table>          
 
