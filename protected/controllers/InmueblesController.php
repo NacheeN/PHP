@@ -46,7 +46,7 @@ class InmueblesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','busqueda'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -321,8 +321,7 @@ class InmueblesController extends Controller
 
 				if($mail->Send()){
 
-					//Yii::app()->user->setFlash('contact','Gracias por contactarse. Le responderemos tan pronto sea posible.');
-					$this->refresh();
+					
 					$url = $this->createAbsoluteUrl('/site/index');
 					$this->redirect($url, true);
 				} 
