@@ -42,7 +42,7 @@
                     <?php } ?>
                     <?php 
                     	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 1))
-                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/admin">Panel Control</a></li>' ?>  
+                    		echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/admin">Panel Control</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/solicitudes/index">Solicitudes</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/create">Agendar Visita</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/destacados/index">Destacados</a></li>' ?>  
                      <?php 
                     	if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3))
                       {

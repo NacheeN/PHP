@@ -37,13 +37,19 @@ if ( Yii::app()->user->isGuest ) {
 ?>
 
 <div id="slider" class="carousel slide" data-ride="carousel" >
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0" class="active"></li>
+  </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" >
+  <div class="carousel-inner">
 
     <?php $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$lista,
     'itemView'=>'_listaDestacados',
+    'enablePagination' => false,
+    'summaryText'=>'', 
     )); ?>
     
   </div>
