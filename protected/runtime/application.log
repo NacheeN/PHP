@@ -23744,3 +23744,20 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/PHP/
 ---
+2014/07/15 22:44:07 [error] [php] Trying to get property of non-object (C:\wamp\www\PHP\protected\views\site\index.php:49)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\PHP\protected\controllers\SiteController.php(55): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/
+in C:\wamp\www\PHP\protected\views\site\index.php (49)
+in C:\wamp\www\PHP\protected\controllers\SiteController.php (55)
+in C:\wamp\www\PHP\index.php (13)

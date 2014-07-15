@@ -41,7 +41,7 @@ class SiteController extends Controller
 		));
 
 
-
+		
 		$inm=new CActiveDataProvider('Inmuebles', array(
 		    'criteria'=>array(
 		        'condition'=>'destacado=1',
