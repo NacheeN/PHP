@@ -87,7 +87,7 @@ class InmueblesController extends Controller
 
 			if($model->save())
 			{
-				$this->redirect(array('imagenes','id'=>$model->id));
+				$this->redirect(array('/imagenes/create?id_inmueble='.$model->id));
 			}
 		}
 

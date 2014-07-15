@@ -36,7 +36,15 @@
 				<?php echo $form->error($model,'nombre'); ?>
 			</div>
 		</div>
-
+		<div class="form-group">
+			<div class="col-lg-2">
+				<?php echo $form->labelEx($model,'operacion'); ?>
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->dropDownList($model,'operacion', $model->getTypeOptions()); ?>
+				<?php echo $form->error($model,'operacion'); ?>
+			</div>
+		</div>	
 		<div class="form-group">
 			<div class="col-lg-2">
 				<?php echo $form->labelEx($model,'valor'); ?>
