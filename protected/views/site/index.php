@@ -14,26 +14,7 @@ $this->pageTitle=Yii::app()->name;
 <?php 
 
 if ( Yii::app()->user->isGuest ) { 
-//$lista =Inmuebles::model()->findAll('destacado=1');
-/*
-  $this->widget(
-    'booster.widgets.TbCarousel',
-    array(
-        'slide' => true,
-        'displayPrevAndNext' => true,
-        'items' => array(
-                        foreach($lista as $value) 
-                        {
-                            array(
-                                'image' => 'echo Yii::app()->request->baseUrl."/images/inmueble/".$value->imagen_portada',
-                                'label' => 'echo $value->barrio->ciudad->nombre',
-                                'caption' => 'echo $data->decripcion',
-                            ),
-                        }
-                    ),
-    )
-);
-*/
+
 ?>
 
 
@@ -169,10 +150,6 @@ if ( Yii::app()->user->isGuest ) {
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
-
-
-
 
 <div id="slider" class="carousel slide" data-ride="carousel" >
   <!-- Indicators -->

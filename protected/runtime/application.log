@@ -23761,3 +23761,24 @@ REQUEST_URI=/PHP/
 in C:\wamp\www\PHP\protected\views\site\index.php (49)
 in C:\wamp\www\PHP\protected\controllers\SiteController.php (55)
 in C:\wamp\www\PHP\index.php (13)
+2014/07/15 23:27:38 [error] [exception.CException] exception 'CException' with message 'InmueblesController cannot find the requested view "busqueda".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('busqueda', Array, true)
+#1 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(572): CController->render('busqueda', Array)
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InmueblesController->actionBusqueda()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('busqueda')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/busqu...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/PHP/inmuebles/busqueda
+HTTP_REFERER=http://localhost:90/PHP/
+---
