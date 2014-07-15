@@ -56,7 +56,7 @@ $this->breadcrumbs=array(
 
 	<div class="form-group">
 		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'name'); ?>
+			<?php echo $form->labelEx($model,'Nombre'); ?>
 		</div>
 		<div class="col-lg-10">
 			<?php echo $form->textField($model,'name'); ?>
@@ -65,7 +65,7 @@ $this->breadcrumbs=array(
 	</div>
 	<div class="form-group">
 		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'email'); ?>
+			<?php echo $form->labelEx($model,'Email'); ?>
 		</div>
 		<div class="col-lg-10">
 			<?php echo $form->textField($model,'email'); ?>
@@ -74,7 +74,7 @@ $this->breadcrumbs=array(
 	</div>
 	<div class="form-group">
 		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'subject'); ?>
+			<?php echo $form->labelEx($model,'Asunto'); ?>
 		</div>
 		<div class="col-lg-10">
 			<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
@@ -83,7 +83,7 @@ $this->breadcrumbs=array(
 	</div>
 	<div class="form-group">
 		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'body'); ?>
+			<?php echo $form->labelEx($model,'Mensaje'); ?>
 		</div>
 		<div class="col-lg-10">
 			<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
@@ -95,7 +95,7 @@ $this->breadcrumbs=array(
 	<?php if(CCaptcha::checkRequirements()): ?>
 	<div class="form-group">
 		<div class="col-lg-2">
-			<?php echo $form->labelEx($model,'verifyCode'); ?>
+			<?php echo $form->labelEx($model,'Validar Codigo'); ?>
 		</div>
 		<div class="col-lg-10">
 			<?php $this->widget('CCaptcha'); ?>
