@@ -51,7 +51,9 @@
                       <?php 
                       if((Yii::app()->user->id != '') and (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 2))
                       {
+
                         echo '<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/inmuebles/create">Alta Inmueble</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/usuarios/create">Clientes</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/solicitudes/index">Solicitudes</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/eventos/create">Agendar Visita</a></li>'.'<li><a href="'.Yii::app()->request->hostInfo.Yii::app()->request->baseUrl.'/destacados/index">Destacados</a></li>';
+
                       }
                         ?>
                       

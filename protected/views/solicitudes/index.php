@@ -23,6 +23,7 @@ $this->menu=array(
 
 <?php
 if (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 2) { 
+
   if ($dataProvider != null) {
       
         echo CHtml::openTag('div', array('class' => 'row-fluid'));
@@ -47,6 +48,7 @@ if (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 2) {
 }
 else if (Usuarios::model()->find('id='.Yii::app()->user->id)->id_rol == 3) 
 {
+
     if ($dataProvider != null) {
 
         echo CHtml::openTag('div', array('class' => 'row-fluid'));

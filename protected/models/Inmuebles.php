@@ -40,6 +40,10 @@ class Inmuebles extends CActiveRecord
 
 	private $_id_departamento;
 	private $_id_ciudad;
+
+	const TIPO_VENTA='VENTA';
+	const TIPO_ALQUILER='ALQUILER';
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -213,5 +217,13 @@ class Inmuebles extends CActiveRecord
 	{		
 		$rolesArray = CHtml::listData(Departamento::model()->findAll(), 'id','nombre');
 		return $rolesArray;
+	}
+
+	public function getTypeOptions()
+	{
+		return array(
+			self::TIPO_VENTA=>'VENTA',
+			self::TIPO_ALQUILER=>'ALQUILER',
+			);
 	}
 }

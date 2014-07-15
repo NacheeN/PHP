@@ -3,6 +3,7 @@
 /* @var $data Inmuebles */
 ?>
 
+
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail" style="height:470px">
     	 <h4><?php echo CHtml::encode($data->titulo), CHtml::link('&times', array('inmuebles/delete', 'id'=>$data->id), array('class'=>'close text-right')); ?></h4>
