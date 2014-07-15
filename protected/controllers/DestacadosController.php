@@ -1,6 +1,6 @@
 <?php
 
-class InmueblesController extends Controller
+class DestacadosController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,7 +32,7 @@ class InmueblesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes','delete','activa'),
+				'actions'=>array('create','update','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,40 +62,20 @@ class InmueblesController extends Controller
 	 */
 	public function actionCreate()
 	{
-		
-		$model=new Inmuebles;
+		$model=new Destacados;
 
-		$b=new Barrio;
-		$c=new Ciudad;
-		$d=new Departamento;
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
-		//$model->id_usuario=Yii::app()->user->id;
-		if(isset($_POST['Inmuebles']))
+		if(isset($_POST['Destacados']))
 		{
-			$model->attributes=$_POST['Inmuebles'];
-
-			$uploadedFile=CUploadedFile::getInstance($model,'imagen_portada');
-			$aleatorio = rand(100000, 999999);
-			$fileName = $aleatorio."{$uploadedFile}"; //file name
-           
-			if(!empty($uploadedFile))  // check if uploaded file is set or not
-            {
-              	
-               	$uploadedFile->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$fileName);
-                $model->imagen_portada = $fileName;
-            }
-
+			$model->attributes=$_POST['Destacados'];
 			if($model->save())
-			{
-				$this->redirect(array('/imagenes/create?id_inmueble='.$model->id));
-			}
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'ciudad'=>$c,
-			'dep'=>$d,
-			'barrio'=>$b,
 		));
 	}
 
@@ -110,10 +90,10 @@ class InmueblesController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		$model->id_usuario=Yii::app()->user->id;
-		if(isset($_POST['Inmuebles']))
+
+		if(isset($_POST['Destacados']))
 		{
-			$model->attributes=$_POST['Inmuebles'];
+			$model->attributes=$_POST['Destacados'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -134,56 +114,15 @@ class InmueblesController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('site/index'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	public function actionImagenes($id)
-	{
-		$model=new Imagenes;
-
-		if(isset($_POST['Imagenes']))
-			echo "<script>alert('".isset($_POST['Imagenes']['ruta'])."');</script>";
-
-
-		if(isset($_POST['Imagenes']))
-		{
-			echo "<script>alert('".($_POST['Imagenes']['ruta'])."');</script>";
-
-			$model->attributes=$_POST['Imagenes'];
-			
-			$uploadedFile=CUploadedFile::getInstance($model,'ruta');
-			
-			$aleatorio = rand(100000, 999999);
-			
-			$fileName = $aleatorio."{$uploadedFile}"; //file name
-			
-           
-			if(!empty($uploadedFile))  // check if uploaded file is set or not
-            {           	
-               	$uploadedFile->saveAs(Yii::app()->basePath.'/../images/inmueble/'.$fileName);  	
-                $model->ruta = $fileName;
-            }
-            
-			if($model->save())
-			{
-				echo "<script>alert('message10');</script>";
-				$this->redirect(array('imagenes','id'=>$model->id));
-			}
-		}
-
-
-		
-		$this->render('imagenes',array(
-			'model'=>$model,
-		));
-	}
-	
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Inmuebles');
+		$dataProvider=new CActiveDataProvider('Destacados');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -194,10 +133,10 @@ class InmueblesController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Inmuebles('search');
+		$model=new Destacados('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Inmuebles']))
-			$model->attributes=$_GET['Inmuebles'];
+		if(isset($_GET['Destacados']))
+			$model->attributes=$_GET['Destacados'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -208,12 +147,12 @@ class InmueblesController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Inmuebles the loaded model
+	 * @return Destacados the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Inmuebles::model()->findByPk($id);
+		$model=Destacados::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -221,38 +160,14 @@ class InmueblesController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Inmuebles $model the model to be validated
+	 * @param Destacados $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='inmuebles-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='destacados-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
-
-	public function actionActiva($id,$activa)
-	{
-		
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-		/*
-		if(isset($_GET['id'])){
-			$id=$_GET['id'];
-			$model=$this->loadModel($id);
-		}
-			
-		if(isset($_GET['activa']))
-			$activa=$_GET['activa'];
-		*/
-		$model=$this->loadModel($id);
-		$model->activo=$activa;
-		if($model->save()){
-			$this->redirect(array('site/index'));
-		}
-
-	}
-
-
 }

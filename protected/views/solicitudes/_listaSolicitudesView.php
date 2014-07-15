@@ -1,4 +1,4 @@
-<?php if ($data->tipo=='Solicitud Publicacion')) { ?>
+<?php if ($data->tipo=='Solicitud Publicacion') { ?>
 
 <div class="container">
     <div class="thumbnail" style="height:200px">

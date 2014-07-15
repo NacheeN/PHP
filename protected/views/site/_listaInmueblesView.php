@@ -29,6 +29,7 @@
 	
 </div>
 -->
+<?php if ($data->activo == true) { ?>
 
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail" style="height:470px">
@@ -43,3 +44,5 @@
         </div>
     </div>
 </div>
+
+<?php  } ?>
