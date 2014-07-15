@@ -129,7 +129,38 @@
 		</div>
 
 		<div class="col-lg-6">
-			
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->labelEx($model,'id_cliente'); ?>
+				
+				</div>
+				<div class="col-lg-10">
+					<?php echo $form->dropDownList($model,'id_cliente', CHtml::listData(Usuarios::model()->findAll(), 'id','nombre'));?>	 				
+					<?php echo $form->error($model,'id_cliente'); ?>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->labelEx($model,'id_agente'); ?>
+				
+				</div>
+				<div class="col-lg-10">
+					<?php echo $form->dropDownList($model,'id_agente', CHtml::listData(Usuarios::model()->findAll(), 'id','nombre'));?>	 				
+					<?php echo $form->error($model,'id_agente'); ?>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-lg-4">
+					<?php echo $form->labelEx($model,'id_inmueble'); ?>
+				
+				</div>
+				<div class="col-lg-10">
+					<?php echo $form->dropDownList($model,'id_inmueble', CHtml::listData(Inmuebles::model()->findAll(), 'id','titulo'));?>	 				
+					<?php echo $form->error($model,'id_inmueble'); ?>
+				</div>
+			</div>
 		</div>
 
 	</div>

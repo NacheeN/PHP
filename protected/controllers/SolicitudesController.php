@@ -24,24 +24,24 @@ class SolicitudesController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+	public function accessRules()	/*	NACHEEN  */
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('create'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete','lista'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			/*array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			),*/
 		);
 	}
 
@@ -66,12 +66,15 @@ class SolicitudesController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$model->estado='Pendiente';
 		if(isset($_POST['Solicitudes']))
 		{
 			$model->attributes=$_POST['Solicitudes'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				Yii::app()->user->setFlash('solicitud','Su solicitud a sido creada.');
+				$this->refresh();
+			}
+				
 		}
 
 		$this->render('create',array(
@@ -79,29 +82,6 @@ class SolicitudesController extends Controller
 		));
 	}
 
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Solicitudes']))
-		{
-			$model->attributes=$_POST['Solicitudes'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Deletes a particular model.
@@ -114,7 +94,7 @@ class SolicitudesController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**
@@ -122,24 +102,18 @@ class SolicitudesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Solicitudes');
-		$this->render('index',array(
+		$sol =new Solicitudes;
+
+		$criteria=new CDbCriteria;
+        $criteria->addCondition("estado=:est");
+        $criteria->params=array(':est'=>"Pendiente");
+
+        $lista=$sol->findAll($criteria);
+
+		$dataProvider =new CArrayDataProvider($lista);
+
+		 $this->render('index',array(
 			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new Solicitudes('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Solicitudes']))
-			$model->attributes=$_GET['Solicitudes'];
-
-		$this->render('admin',array(
-			'model'=>$model,
 		));
 	}
 
@@ -169,5 +143,21 @@ class SolicitudesController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionLeida($id)
+	{
+		
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		
+			
+		$model->estado='Leida';
+		if($model->save()){
+			$this->redirect(array('index'));
+		}
+			
 	}
 }

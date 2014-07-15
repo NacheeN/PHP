@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 <div class="row">
 
 	<div class="col-lg-12">
-		<?php echo CHtml::link('Crear Solicitud', array('inmuebles/create'), array('class'=>'btn btn-default')); ?>
+		<?php echo CHtml::link('Crear Solicitud', array('solicitudes/create'), array('class'=>'btn btn-default')); ?>
 	</div>
 	
 	<!--

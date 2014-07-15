@@ -15,7 +15,7 @@ class InmueblesController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -32,7 +32,7 @@ class InmueblesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes','delete'),
+				'actions'=>array('create','update','imagenes','delete','activa'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -69,7 +69,7 @@ class InmueblesController extends Controller
 		$c=new Ciudad;
 		$d=new Departamento;
 
-		$model->id_usuario=Yii::app()->user->id;
+		//$model->id_usuario=Yii::app()->user->id;
 		if(isset($_POST['Inmuebles']))
 		{
 			$model->attributes=$_POST['Inmuebles'];
@@ -134,7 +134,7 @@ class InmueblesController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('site/index'));
 	}
 
 	public function actionImagenes($id)
@@ -230,6 +230,28 @@ class InmueblesController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionActiva($id,$activa)
+	{
+		
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		/*
+		if(isset($_GET['id'])){
+			$id=$_GET['id'];
+			$model=$this->loadModel($id);
+		}
+			
+		if(isset($_GET['activa']))
+			$activa=$_GET['activa'];
+		*/
+		$model=$this->loadModel($id);
+		$model->activo=$activa;
+		if($model->save()){
+			$this->redirect(array('site/index'));
+		}
+
 	}
 
 

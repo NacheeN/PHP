@@ -8,8 +8,8 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo CHtml::encode($data->id); ?>">
-          <b><?php echo CHtml::encode($data->getAttributeLabel('titulo')).': '.CHtml::encode($data->titulo).' - '.CHtml::encode($data->fecha_hora_desde); ?></b>
-           <p class="text-right"><?php echo CHtml::link('', array('eventos/delete', 'id'=>$data->id), array('class'=>'glyphicon glyphicon-remove')); ?></p>
+          <b><?php echo CHtml::encode($data->getAttributeLabel('titulo')).': '.CHtml::encode($data->titulo).' - '.CHtml::encode($data->fecha_hora_desde).CHtml::link('&times', array('eventos/delete', 'id'=>$data->id), array('class'=>'close text-right')); ?></b>
+           
         </a>
       </h4>
     </div>

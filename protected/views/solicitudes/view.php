@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Solicitudes'=>array('index'),
-	$model->id,
+	//$model->id,
 );
 
 $this->menu=array(
@@ -16,17 +16,18 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Solicitudes #<?php echo $model->id; ?></h1>
+<h1>Solicitud <?php //echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
-		'id_usuario',
+		//'id',
+		//'id_usuario',
 		'nombre',
 		'telefono',
 		'email',
 		'descripcion',
 		'tipo',
+		//'estado'
 	),
 )); ?>

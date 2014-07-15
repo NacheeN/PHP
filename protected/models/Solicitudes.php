@@ -5,15 +5,13 @@
  *
  * The followings are the available columns in table 'solicitudes':
  * @property integer $id
- * @property integer $id_usuario
  * @property string $nombre
  * @property string $telefono
  * @property string $email
  * @property string $descripcion
  * @property string $tipo
  *
- * The followings are the available model relations:
- * @property Usuarios $idUsuario
+ @property $estado
  */
 class Solicitudes extends CActiveRecord
 {
@@ -33,15 +31,15 @@ class Solicitudes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario', 'required'),
-			array('id_usuario', 'numerical', 'integerOnly'=>true),
+			array('estado', 'required'),
 			array('nombre, telefono', 'length', 'max'=>15),
 			array('email', 'length', 'max'=>50),
-			array('tipo', 'length', 'max'=>30),
+			array('tipo', 'length', 'max'=>21),
+			array('estado', 'length', 'max'=>9),
 			array('descripcion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_usuario, nombre, telefono, email, descripcion, tipo', 'safe', 'on'=>'search'),
+			array('id, nombre, telefono, email, descripcion, tipo, estado','safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +51,7 @@ class Solicitudes extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idUsuario' => array(self::BELONGS_TO, 'Usuarios', 'id_usuario'),
+			
 		);
 	}
 
@@ -64,12 +62,12 @@ class Solicitudes extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_usuario' => 'Id Usuario',
 			'nombre' => 'Nombre',
 			'telefono' => 'Telefono',
 			'email' => 'Email',
 			'descripcion' => 'Descripcion',
 			'tipo' => 'Tipo',
+			'estado' => 'Estado',
 		);
 	}
 
@@ -92,12 +90,12 @@ class Solicitudes extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('id_usuario',$this->id_usuario);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('tipo',$this->tipo,true);
+		$criteria->compare('Leida',$this->estado,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -15,7 +15,7 @@ class EventosController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -32,7 +32,7 @@ class EventosController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','calendarevents','view','admin','delete'),
+				'actions'=>array('create','update','calendarevents','view','admin','delete','nuevo'),
 				'users'=>array('@'),
 			),
 			//array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -51,6 +51,9 @@ class EventosController extends Controller
 	 */
 	public function actionView($id)
 	{
+		
+		if(isset($_GET['id']))
+			$id=$_GET['id'];
 		if (@$_GET['asModal']==true)
         {
             $this->renderPartial('view',
@@ -59,7 +62,7 @@ class EventosController extends Controller
         }
         else{
             //$this->layout = 'column2';
-            $this->render('view',array(
+            $this->renderPartial('view',array(
                 'model'=>$this->loadModel($id),
             ));
         }
@@ -70,15 +73,15 @@ class EventosController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($id)
+	public function actionCreate()
 	{
 		$model=new Eventos;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		$model->id_inmueble=$id;
-		$model->id_agente=Yii::app()->user->id;
-		$model->id_cliente=Yii::app()->user->id;
+		//$model->id_inmueble=$id;
+		//$model->id_agente=Yii::app()->user->id;
+		//$model->id_cliente=Yii::app()->user->id;
 
 		if(isset($_POST['Eventos']))
 		{
@@ -89,6 +92,29 @@ class EventosController extends Controller
 		}
 
 		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionNuevo($id)
+	{
+		$model=new Eventos;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		$model->id_inmueble=$id;
+		//$model->id_agente=Yii::app()->user->id;
+		//$model->id_cliente=Yii::app()->user->id;
+
+		if(isset($_POST['Eventos']))
+		{
+			$model->attributes=$_POST['Eventos'];
+			if($model->save())
+				//$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
+		}
+
+		$this->render('nuevo',array(
 			'model'=>$model,
 		));
 	}
@@ -128,7 +154,7 @@ class EventosController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**

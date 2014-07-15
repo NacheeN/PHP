@@ -19,14 +19,27 @@
 	)
 ); ?>
 	<div class="form-group">
-		<div class="col-lg-2">
+		<div class="col-lg-12">
 			<div class="text-danger">
 				<?php echo $form->errorSummary($model); ?>
 			</div>
 		</div>
 	</div>
 
+				
+
 	<div class="col-lg-8">
+
+		<div class="form-group">
+			<div class="col-lg-2">
+				<p>Cliente:</p>
+			</div>
+			<div class="col-lg-10">
+				<?php echo $form->dropDownList($model,'id_usuario', CHtml::listData(Usuarios::model()->findAll(), 'id','nombre'));?>
+				<?php echo $form->error($model,'id_usuario'); ?>
+			</div>
+		</div>
+
 		<div class="form-group">
 			<div class="col-lg-2">
 				<?php echo $form->labelEx($model,'nombre'); ?>
@@ -162,18 +175,18 @@
 				<?php echo $form->error($model,'tipo'); ?>
 			</div>
 		</div>
-
+		<!--
 		<div class="form-group">
 			<div class="col-lg-2">
-				<?php echo $form->labelEx($model,'propietario'); ?>
+				<?php #echo $form->labelEx($model,'propietario'); ?>
 			
 			</div>
 			<div class="col-lg-10">
-				<?php echo $form->textField($model,'propietario',array('size'=>50,'maxlength'=>50)); ?>
-				<?php echo $form->error($model,'propietario'); ?>
+				<?php #echo $form->textField($model,'propietario',array('size'=>50,'maxlength'=>50)); ?>
+				<?php #echo $form->error($model,'propietario'); ?>
 			</div>
 		</div>
-
+		-->
 		<div class="form-group">
 			<div class="col-lg-2">
 				<?php echo $form->labelEx($model,'cantidad_banios'); ?>

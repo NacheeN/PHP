@@ -7,10 +7,6 @@ $this->breadcrumbs=array(
 	'Crear',
 );
 
-$this->menu=array(
-	array('label'=>'List Inmuebles', 'url'=>array('index')),
-	array('label'=>'Manage Inmuebles', 'url'=>array('admin')),
-);
 ?>
 
 <div class="page-header">
