@@ -83,12 +83,35 @@ class EventosController extends Controller
 		//$model->id_agente=Yii::app()->user->id;
 		//$model->id_cliente=Yii::app()->user->id;
 
+
+
 		if(isset($_POST['Eventos']))
 		{
 			$model->attributes=$_POST['Eventos'];
-			if($model->save())
-				//$this->redirect(array('view','id'=>$model->id));
+			if($model->save()){
+				
+				Yii::import('application.extensions.phpmailer.JPhpMailer');
+	
+				$mail = new JPhpMailer;
+
+				
+				$mail->IsSMTP();
+				$mail->SMTPDebug = 1;
+				$mail->Host = 'smtp.gmail.com';
+				$mail->SMTPAuth = true;
+				$mail->SMTPSecure = "ssl"; 
+				$mail->Username = "php.inmobiliaria.2014@gmail.com";
+				$mail->Port = '465'; 
+				$mail->Password = "grupophp";
+				$mail->SetFrom($model->cliente->email,$model->cliente->nombre);
+				$mail->AddAddress("");
+				$mail->Subject = "Cita Inmmobiliaria";
+				$mail->Body = "Se genero la cita fecha desde: ".$model->fecha_hora_desde." hasta: ".$model->fecha_hora_desde.".";
+
+				$mail->Send();
+
 				$this->redirect(array('index'));
+			}
 		}
 
 		$this->render('create',array(

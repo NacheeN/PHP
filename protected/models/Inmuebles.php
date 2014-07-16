@@ -12,12 +12,12 @@
  * @property string $direccion
  * @property string $titulo
  * @property string $descripcion
+ * @property integer $amueblado
  * @property integer $garage
  * @property integer $jardin
  * @property integer $parrillero
  * @property integer $piso
  * @property string $tipo
- * @property string $propietario
  * @property integer $prestamo_bancario
  * @property integer $cantidad_banios
  * @property integer $cantidad_habitaciones
@@ -25,15 +25,9 @@
  * @property string $imagen_portada
  * @property string $fecha_creacion
  * @property integer $id_barrio
- * @property integer $amueblado
+ * @property integer $activo
  * @property string $operacion
- * The followings are the available model relations:
- * @property Destacados[] $destacadoses
- * @property Eventos[] $eventoses
- * @property Imagenes[] $imagenes
- * @property Barrio $idBarrio
- * @property Usuarios $idUsuario
- * @property Operacion[] $operacions
+ * @property integer $destacado
  */
 class Inmuebles extends CActiveRecord
 {
@@ -61,17 +55,17 @@ class Inmuebles extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_usuario, operacion', 'required'),
-			array('id_usuario, garage, jardin, parrillero, piso, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, id_barrio, amueblado', 'numerical', 'integerOnly'=>true),
+			array('id_usuario, amueblado, garage, jardin, parrillero, piso, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, id_barrio, activo, destacado', 'numerical', 'integerOnly'=>true),
 			array('valor', 'numerical'),
 			array('imagen_portada','file','types'=>'jpg, jpeg, png, gif', 'allowEmpty'=>true, 'on'=>'update'),
 			array('nombre', 'length', 'max'=>15),
 			array('estado', 'length', 'max'=>20),
-			array('direccion, titulo, imagen_portada', 'length', 'max'=>50),
+			array('direccion, titulo, imagen_portada', 'length', 'max'=>255),
 			array('tipo', 'length', 'max'=>7),
 			array('descripcion, fecha_creacion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, imagen_portada, fecha_creacion, id_barrio, amueblado, operacion', 'safe', 'on'=>'search'),
+			array('id, id_usuario, nombre, valor, estado, direccion, titulo, descripcion, garage, jardin, parrillero, piso, tipo, prestamo_bancario, cantidad_banios, cantidad_habitaciones, superficie, imagen_portada, fecha_creacion, id_barrio, amueblado, operacion, activo, destacado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -106,6 +100,7 @@ class Inmuebles extends CActiveRecord
 			'direccion' => 'Direccion',
 			'titulo' => 'Titulo',
 			'descripcion' => 'Descripcion',
+			'amueblado' => 'Amueblado',
 			'garage' => 'Garage',
 			'jardin' => 'Jardin',
 			'parrillero' => 'Parrillero',
@@ -118,9 +113,10 @@ class Inmuebles extends CActiveRecord
 			'imagen_portada' => 'Imagen Portada',
 			'fecha_creacion' => 'Fecha Creacion',
 			'id_barrio' => 'Barrio',
-			'amueblado' => 'Amueblado',
 			'idDepartamento' => 'Departamento',
+			'activo' => 'Activo',
 			'operacion' => 'Operacion',
+			'destacado' => 'Destacado',
 		);
 	}
 
@@ -150,6 +146,7 @@ class Inmuebles extends CActiveRecord
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('titulo',$this->titulo,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
+		$criteria->compare('amueblado',$this->amueblado);
 		$criteria->compare('garage',$this->garage);
 		$criteria->compare('jardin',$this->jardin);
 		$criteria->compare('parrillero',$this->parrillero);
@@ -162,8 +159,9 @@ class Inmuebles extends CActiveRecord
 		$criteria->compare('imagen_portada',$this->imagen_portada,true);
 		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('id_barrio',$this->id_barrio);
-		$criteria->compare('amueblado',$this->amueblado);
+		$criteria->compare('activo',$this->activo);
 		$criteria->compare('operacion',$this->operacion,true);
+		$criteria->compare('destacado',$this->destacado);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -71,7 +71,7 @@ class UsuariosController extends Controller
 		{
 			$model->attributes=$_POST['Usuarios'];
 			if($model->save())
-				$this->redirect(array('index'));
+				$this->redirect(array('site/index'));
 		}
 
 		$this->render('create',array(

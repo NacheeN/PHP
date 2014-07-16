@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-07-2014 a las 00:45:12
--- Versión del servidor: 5.6.16
--- Versión de PHP: 5.5.11
+-- Tiempo de generación: 16-07-2014 a las 03:40:14
+-- Versión del servidor: 5.6.17
+-- Versión de PHP: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `db_inmobiliaria`
 --
+CREATE DATABASE IF NOT EXISTS `db_inmobiliaria` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_inmobiliaria`;
 
 -- --------------------------------------------------------
 
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `barrio`
 --
 
+DROP TABLE IF EXISTS `barrio`;
 CREATE TABLE IF NOT EXISTS `barrio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_departamento` int(11) NOT NULL,
@@ -109,6 +112,7 @@ INSERT INTO `barrio` (`id`, `id_departamento`, `id_ciudad`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `ciudad`
 --
 
+DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE IF NOT EXISTS `ciudad` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_departamento` int(11) NOT NULL,
@@ -149,6 +153,7 @@ INSERT INTO `ciudad` (`id`, `id_departamento`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `departamento`
 --
 
+DROP TABLE IF EXISTS `departamento`;
 CREATE TABLE IF NOT EXISTS `departamento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
@@ -186,6 +191,7 @@ INSERT INTO `departamento` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `destacados`
 --
 
+DROP TABLE IF EXISTS `destacados`;
 CREATE TABLE IF NOT EXISTS `destacados` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_inmueble` int(11) NOT NULL,
@@ -194,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `destacados` (
   `fecha_fin` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_INMUEBLE` (`id_inmueble`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -202,6 +208,7 @@ CREATE TABLE IF NOT EXISTS `destacados` (
 -- Estructura de tabla para la tabla `eventos`
 --
 
+DROP TABLE IF EXISTS `eventos`;
 CREATE TABLE IF NOT EXISTS `eventos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_cliente` int(11) NOT NULL,
@@ -214,7 +221,16 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   KEY `FK_USUARIO_CLIENTE` (`id_cliente`),
   KEY `FK_USUARIO_AGENTE` (`id_agente`),
   KEY `FK_INMUEBLE` (`id_inmueble`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=14 ;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `id_cliente`, `id_agente`, `id_inmueble`, `titulo`, `fecha_hora_desde`, `fecha_hora_hasta`) VALUES
+(11, 4, 3, 22, 'nueva visita', '2014-07-24 12:00:00', '2014-07-15 05:00:00'),
+(12, 4, 3, 23, 'nueva cita', '2014-07-23 11:00:00', '2014-07-17 01:00:00'),
+(13, 8, 3, 25, 'otra visita', '2014-07-23 12:00:00', '2014-07-23 04:00:00');
 
 -- --------------------------------------------------------
 
@@ -222,13 +238,36 @@ CREATE TABLE IF NOT EXISTS `eventos` (
 -- Estructura de tabla para la tabla `imagenes`
 --
 
+DROP TABLE IF EXISTS `imagenes`;
 CREATE TABLE IF NOT EXISTS `imagenes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_inmueble` int(11) NOT NULL,
-  `ruta` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `ruta` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_INMUEBLE` (`id_inmueble`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=24 ;
+
+--
+-- Volcado de datos para la tabla `imagenes`
+--
+
+INSERT INTO `imagenes` (`id`, `id_inmueble`, `ruta`, `descripcion`) VALUES
+(7, 22, '839242apartamentos1.jpg', 'habitacion'),
+(8, 22, '311816apartamento-sion_0.jpg', 'comedor'),
+(9, 22, '577053apartamentos-nuevos-caaveral-proyecto-tayrona-21465395.jpg', 'plano'),
+(10, 23, '681066apartamentosdeluxo.jpg', 'comedor'),
+(11, 23, '719107images.jpg', 'cuarto'),
+(12, 23, '351422apartamento-de-luxo-13.jpg', 'balcon'),
+(13, 24, '841027quinta+do+horto-living+apartamento+130m2-g.jpg', 'living-comedor'),
+(14, 24, '154849imagemDELAS projetoGERSONDUTRA2.jpg', 'habitacion'),
+(15, 24, '140951imagemDELAS projetoGERSONDUTRA2.jpg', 'habitacion'),
+(16, 24, '923095images (11).jpg', 'plano'),
+(17, 25, '6446742.jpg', 'comedor'),
+(18, 25, '872668descarga (1).jpg', 'plano'),
+(21, 27, '947320apartamentos-nuevos-caaveral-proyecto-tayrona-21465395.jpg', 'plano'),
+(22, 28, '471640sevitur-apartamentos.jpg', 'living'),
+(23, 28, '855639descarga (1).jpg', 'plano');
 
 -- --------------------------------------------------------
 
@@ -236,6 +275,7 @@ CREATE TABLE IF NOT EXISTS `imagenes` (
 -- Estructura de tabla para la tabla `inmuebles`
 --
 
+DROP TABLE IF EXISTS `inmuebles`;
 CREATE TABLE IF NOT EXISTS `inmuebles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NOT NULL,
@@ -251,7 +291,6 @@ CREATE TABLE IF NOT EXISTS `inmuebles` (
   `parrillero` tinyint(1) DEFAULT NULL,
   `piso` int(3) DEFAULT NULL,
   `tipo` enum('Casa','Apto','Local','Terreno','Oficina') COLLATE utf8_spanish_ci DEFAULT NULL,
-  `propietario` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `prestamo_bancario` tinyint(1) DEFAULT NULL,
   `cantidad_banios` int(11) DEFAULT NULL,
   `cantidad_habitaciones` int(11) DEFAULT NULL,
@@ -260,27 +299,25 @@ CREATE TABLE IF NOT EXISTS `inmuebles` (
   `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `id_barrio` int(11) DEFAULT NULL,
   `activo` tinyint(1) DEFAULT NULL,
+  `operacion` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `destacado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_USUARIO` (`id_usuario`),
-  KEY `FK_BARRIO` (`id_barrio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=18 ;
+  KEY `FK_BARRIO` (`id_barrio`),
+  FULLTEXT KEY `busqueda` (`nombre`,`direccion`,`titulo`,`descripcion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=29 ;
 
 --
 -- Volcado de datos para la tabla `inmuebles`
 --
 
-INSERT INTO `inmuebles` (`id`, `id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `propietario`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`, `fecha_creacion`, `id_barrio`, `activo`) VALUES
-(7, 1, 'Apto Reducto', 500000, 'A Estrenar', 'Continuacion Abayuba 2582/201 Block L', 'Casa Nueva en Reducto', 'asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss asdddd', 1, 0, 0, 0, 4, 'Apto', 'Gonzalo Castro', 1, 2, 5, 120, '1.jpg', '2014-07-01 16:31:57', 1, NULL),
-(8, 1, 'nuevo immueble', 78888, 'Reciclado', 'La verdad ni idea 234', 'Primero Siempre', 'no tengo ni idea', 0, 1, 0, 1, 1, 'Apto', 'Jorge Gutierrez', 1, 3, 4, 90, '3.jpg667581', '2014-07-01 16:44:47', 1, NULL),
-(9, 1, 'apto ato', 78888, 'Reparaciones Menores', 'nueva 1233', 'Casa Nueva en Reducto', 'jjssddddd', 1, 1, 0, 0, 3, 'Apto', 'Gaston Baldenegro', 0, 3, 6, 244, '9884912.jpg', '2014-07-01 22:53:24', 1, NULL),
-(10, 3, 'Inmueble Gonzal', 50000, 'Nuevo', 'Garcia Pintos 1104', 'Inmueble Gonzalo', 'Inmueble Gonzal', 1, 1, 0, 1, 1, 'Casa', 'Gonzalo Castro', 1, 1, 3, 120, '', '2014-07-07 17:22:48', 1, NULL),
-(11, 3, 'asdasdasd', 50000, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '523934DarkSouls2_1600.jpg', '2014-07-07 21:35:29', 1, NULL),
-(12, 3, '', NULL, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '', '2014-07-08 16:45:09', 1, NULL),
-(13, 3, '', NULL, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '', '2014-07-08 16:45:22', 1, NULL),
-(14, 3, '', NULL, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '', '2014-07-08 17:08:24', 1, NULL),
-(15, 3, 'asdasd', NULL, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '465075Camisa 1.jpg', '2014-07-08 19:49:31', 1, NULL),
-(16, 3, '', NULL, 'A Estrenar', '', '', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '', '2014-07-08 19:49:59', 1, NULL),
-(17, 3, 'asdasdasdas', 3213120000, 'A Estrenar', 'dasdasdasd', 'asdasdas', '', 0, 0, 0, 0, NULL, 'Casa', '', 0, NULL, NULL, NULL, '677633321655.jpg', '2014-07-08 19:53:09', 16, NULL);
+INSERT INTO `inmuebles` (`id`, `id_usuario`, `nombre`, `valor`, `estado`, `direccion`, `titulo`, `descripcion`, `amueblado`, `garage`, `jardin`, `parrillero`, `piso`, `tipo`, `prestamo_bancario`, `cantidad_banios`, `cantidad_habitaciones`, `superficie`, `imagen_portada`, `fecha_creacion`, `id_barrio`, `activo`, `operacion`, `destacado`) VALUES
+(22, 4, 'nueva casa', 250000, 'Reciclado', 'nueva 1234', 'nueva casa punta carretas', 'nueva casa a extrenar', 0, 1, 1, 0, 2, 'Casa', 1, 2, 4, 120000, '566314mattisplus-propiedades_51757a6d9fd77-681x532.jpg', '2014-07-16 00:20:06', 6, 0, 'VENTA', 1),
+(23, 6, 'alquiler apto', 14000, 'Reciclado', 'herrara 1342 ap 201', 'Apto a estrenar de Parque rodo', 'nuevo apartamento en parque rodo a pasitos de la rambla, muy amplio.', 0, 0, 0, 0, 1, 'Apto', 0, 1, 2, 60, '6429163.jpg', '2014-07-16 00:32:16', 5, 1, 'ALQUILER', NULL),
+(24, 4, 'Apto Reducto', 500000, 'A Estrenar', 'Continuacion Abayuba 2582/201 Block L', 'Apartamento Modesto en Reducto', 'Apto a Estrenar para estudiantes de Tecnologo', 0, 0, 0, 0, 1, 'Apto', 1, 2, 4, 90, '148971aptos.jpg', '2014-07-16 00:36:52', 41, 1, 'VENTA', NULL),
+(25, 1, 'casa', 16000, 'Reparaciones Menores', 'aconcagua 1233', 'casa en malvin', 'casa para alquilar, muy buen barrio.', 0, 0, 0, 1, 1, 'Casa', 0, 2, 3, 80, '911834apartamentos-en-menorca-son-bou.jpg', '2014-07-16 00:55:12', 10, NULL, 'ALQUILER', 0),
+(27, 1, 'Apartamento', 78888, 'Para Reciclar', 'aconcagua 1233', 'Oportunidad en Pocitos', 'Apartamento a reciclar.', 0, 0, 0, 0, 1, 'Apto', 1, 1, 2, 80, '800048casa-ou-apartamento-1.jpg', '2014-07-16 01:02:46', 7, NULL, 'VENTA', NULL),
+(28, 6, 'nuevo immueble', 250000, 'A Estrenar', '18 de Julio 3433', 'Casa Nueva en centro', 'Apartamento Nuevo en el centro.', 0, 0, 0, 0, 1, 'Apto', 0, 2, 4, 145, '831497big_138329.jpg', '2014-07-16 01:04:51', 1, NULL, 'ALQUILER', NULL);
 
 -- --------------------------------------------------------
 
@@ -288,6 +325,7 @@ INSERT INTO `inmuebles` (`id`, `id_usuario`, `nombre`, `valor`, `estado`, `direc
 -- Estructura de tabla para la tabla `operacion`
 --
 
+DROP TABLE IF EXISTS `operacion`;
 CREATE TABLE IF NOT EXISTS `operacion` (
   `id_usuario` int(11) NOT NULL,
   `id_inmueble` int(11) NOT NULL,
@@ -303,11 +341,12 @@ CREATE TABLE IF NOT EXISTS `operacion` (
 -- Estructura de tabla para la tabla `roles`
 --
 
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -316,7 +355,9 @@ CREATE TABLE IF NOT EXISTS `roles` (
 INSERT INTO `roles` (`id`, `nombre`) VALUES
 (1, 'Administrador'),
 (2, 'Administrativo'),
-(3, 'Agente');
+(3, 'Agente'),
+(4, 'Comprador'),
+(5, 'Vendedor');
 
 -- --------------------------------------------------------
 
@@ -324,17 +365,29 @@ INSERT INTO `roles` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `solicitudes`
 --
 
+DROP TABLE IF EXISTS `solicitudes`;
 CREATE TABLE IF NOT EXISTS `solicitudes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
   `nombre` varchar(15) COLLATE utf8_spanish_ci DEFAULT NULL,
   `telefono` varchar(15) COLLATE utf8_spanish_ci DEFAULT NULL,
   `email` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `descripcion` text COLLATE utf8_spanish_ci,
-  `tipo` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_USUARIO` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+  `tipo` enum('Solicitud Informacion','Solicitud Publicacion','Admin') COLLATE utf8_spanish_ci DEFAULT NULL,
+  `estado` enum('Pendiente','Leida') COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=7 ;
+
+--
+-- Volcado de datos para la tabla `solicitudes`
+--
+
+INSERT INTO `solicitudes` (`id`, `nombre`, `telefono`, `email`, `descripcion`, `tipo`, `estado`) VALUES
+(1, 'Gaston', '099999999', 'gbg933@hotmail.com', 'prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba ', 'Solicitud Informacion', 'Leida'),
+(2, 'Nacho', '022222222', 'nacho@nacho,com', 'quiero quiero quiero quiero quiero quiero quiero quiero quiero quiero', 'Solicitud Publicacion', 'Pendiente'),
+(3, 'Jose', '09992222', 'gbg933@hotmail.com', 'quiero agregar una casa..', 'Solicitud Informacion', 'Pendiente'),
+(4, 'marta', '222222', 'gbg933@hotmail.com', 'sadasdasdasd', 'Solicitud Informacion', 'Leida'),
+(5, 'Maria', '2210722222', 'gbg933@hotmail.com', 'quiero publicar una casa...', 'Solicitud Publicacion', 'Pendiente'),
+(6, 'Jose', '09999999', 'gbg933@hotmail.com', 'La verdad que re bn', 'Solicitud Informacion', 'Leida');
 
 -- --------------------------------------------------------
 
@@ -342,6 +395,7 @@ CREATE TABLE IF NOT EXISTS `solicitudes` (
 -- Estructura de tabla para la tabla `tbl_migration`
 --
 
+DROP TABLE IF EXISTS `tbl_migration`;
 CREATE TABLE IF NOT EXISTS `tbl_migration` (
   `version` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `apply_time` int(11) DEFAULT NULL,
@@ -362,6 +416,7 @@ INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -374,7 +429,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_rol` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_rol` (`id_rol`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -384,7 +439,10 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `ci`, `telefono`, `email`, `
 (1, 'admin', 'admin', '11111111', '', '', 'admin', 'admin', 1),
 (2, 'administra', 'administrativo', '46074340', '099797510', '', 'administrativo', 'administrativo', 2),
 (3, 'agente', 'agente', '46074340', '099797510', '', 'agente', 'agente', 3),
-(4, 'gonzalo', 'castro', '46074340', '', '', 'gonza', 'gonza', 3);
+(4, 'Gaston', 'Baldenegro', '44534681', '099394334', 'gbg933@hotmail.com', 'gbg933', '12345678', 5),
+(6, 'jose', 'barboza', '3333333', '099394334', 'gbg933@hotmail.com', 'jose22', 'gasgas', 5),
+(7, 'nacho', 'alamon', '4444444', '099999999', 'nacho@nacho.com', 'nacholibre', 'paspas', 5),
+(8, 'Gaston', 'Baldenegro', '44534681', '099394334', 'gbg933@gmail.com', 'gbg933', '12345678', 5);
 
 --
 -- Restricciones para tablas volcadas
@@ -436,12 +494,6 @@ ALTER TABLE `inmuebles`
 ALTER TABLE `operacion`
   ADD CONSTRAINT `fk_inmu` FOREIGN KEY (`id_inmueble`) REFERENCES `inmuebles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `usuario_operacion` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `solicitudes`
---
-ALTER TABLE `solicitudes`
-  ADD CONSTRAINT `fk_user` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`

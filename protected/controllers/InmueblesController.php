@@ -254,8 +254,13 @@ class InmueblesController extends Controller
 	{
 		
 		$model=$this->loadModel($id);
+
 		$model->activo=$activa;
+		$model->save();
+				            echo "<script type='text/javascript'>alert('Valor de la cuota: US$ $model->destacado');</script>";
+
 		if($model->save()){
+
 			$this->redirect(array('site/index'));
 		}
 

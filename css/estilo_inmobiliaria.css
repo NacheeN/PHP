@@ -32,3 +32,7 @@ select{
 
 .carousel-inner { text-align: center; }
 .carousel .item > img { display: inline-block; }
+
+.bus{
+	margin-bottom:10px; 
+}

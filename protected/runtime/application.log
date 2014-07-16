@@ -23782,3 +23782,156 @@ Stack trace:
 REQUEST_URI=/PHP/inmuebles/busqueda
 HTTP_REFERER=http://localhost:90/PHP/
 ---
+2014/07/16 00:18:17 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 00:18:17 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 00:22:00 [error] [exception.CException] exception 'CException' with message 'Property "Inmuebles.save" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('save')
+#1 C:\wamp\www\PHP\protected\controllers\InmueblesController.php(259): CActiveRecord->__get('save')
+#2 [internal function]: InmueblesController->actionActiva('18', '1')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(InmueblesController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InmueblesController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('activa')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('inmuebles/activ...')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/PHP/inmuebles/activa/18?activa=1
+---
+2014/07/16 00:22:29 [error] [php] Object of class Inmuebles could not be converted to string (C:\wamp\www\PHP\protected\controllers\InmueblesController.php:259)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): InmueblesController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): InmueblesController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): InmueblesController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InmueblesController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/inmuebles/activa/18?activa=1
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (259)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:15:03 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:15:03 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:15:40 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:15:40 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:16:05 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:16:05 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:16:35 [error] [php] Trying to get property of non-object (C:\wamp\www\PHP\protected\views\site\_listaInmueblesAgente.php:38)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\PHP\protected\extensions\booster\widgets\TbThumbnails.php(41): SiteController->renderPartial()
+#2 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): TbThumbnails->renderItems()
+#3 unknown(0): TbThumbnails->renderSection()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): TbThumbnails->renderContent()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbThumbnails->run()
+#7 C:\wamp\www\PHP\protected\views\site\index.php(207): SiteController->widget()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#12 C:\wamp\www\PHP\protected\controllers\SiteController.php(70): SiteController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\PHP\index.php(13): CWebApplication->run()
+REQUEST_URI=/PHP/
+in C:\wamp\www\PHP\protected\views\site\_listaInmueblesAgente.php (38)
+in C:\wamp\www\PHP\protected\extensions\booster\widgets\TbThumbnails.php (41)
+in C:\wamp\www\PHP\protected\views\site\index.php (207)
+2014/07/16 02:20:06 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:20:06 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:32:16 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:32:16 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:36:52 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:36:52 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:44:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page.html".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('page.html')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('page.html')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page.html')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PHP/site/page.html?view=about
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/16 02:55:12 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:55:12 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:59:39 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 02:59:39 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 03:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/inmueble/313217Construcción-de-Apartamentos..jpg".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/inmueble...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\PHP\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PHP/images/inmueble/313217Construcci%C3%B3n-de-Apartamentos..jpg
+HTTP_REFERER=http://localhost:90/PHP/
+---
+2014/07/16 03:02:46 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 03:02:46 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 03:04:50 [warning] [application] Failed to set unsafe attribute "idDepartamento" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
+2014/07/16 03:04:50 [warning] [application] Failed to set unsafe attribute "idCiudad" of "Inmuebles".
+in C:\wamp\www\PHP\protected\controllers\InmueblesController.php (93)
+in C:\wamp\www\PHP\index.php (13)
